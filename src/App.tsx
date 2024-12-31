@@ -3,6 +3,8 @@ import Landing from './components/Landing/Landing';
 import Promises from './components/Promises';
 import Contact from './components/Contact';
 import About from './components/About';
+import Navbar from './components/Navbar/Navbar';
+import IntroAnimation from './components/IntroAnimation';
 
 function App() {
   const promisesList = [
@@ -13,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Landing title="TESSA SMITH" description="USC President" image="/images/tessa_smith_landing.jpg"/>
       <Promises promises={promisesList} />
       <About />
