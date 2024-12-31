@@ -1,5 +1,5 @@
 import React from 'react';
-import Landing from './components/Landing';
+import Landing from './components/Landing/Landing';
 import Promises from './components/Promises';
 import Contact from './components/Contact';
 import About from './components/About';
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Landing title="Tessa Smith for 2025-2026 USC" description="Vote for change and progress." />
+      <Landing title="TESSA SMITH" description="USC President" image="/images/tessa_smith_landing.jpg"/>
       <Promises promises={promisesList} />
       <About />
       <Contact />
