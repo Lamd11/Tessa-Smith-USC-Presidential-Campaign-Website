@@ -32,7 +32,7 @@ const Landing: React.FC<LandingProps> = ({ title, description, image }) => {
         }}
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 5.2 }}
       >
         {title}
       </motion.h1>
@@ -41,7 +41,7 @@ const Landing: React.FC<LandingProps> = ({ title, description, image }) => {
         className="absolute bottom-28 right-10 text-3xl font-bold text-off-white md:text-5xl"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 5.2 }}
         style={{
           backgroundColor: '#141619', // Black box
           padding: '10px',
