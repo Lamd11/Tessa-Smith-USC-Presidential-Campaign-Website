@@ -4,14 +4,24 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const IntroAnimation = () => {
     return (
-        <motion.div
-            className="absolute left-0 top-0 z-50 h-full w-full overflow-hidden bg-navy-blue-custom"
-            initial={{ opacity: 1, y: 0}}
-            animate={{ opacity: 1, y: '-100%'}}
-            transition={{ duration: 1.5, delay: 4 }}
-        >
+        <div className="absolute left-0 top-0 h-full w-full overflow-hidden">
             <motion.div
-                className="absolute"
+                className="absolute left-0 top-0 z-20 h-full w-full overflow-hidden bg-light-blue-custom"
+                initial={{ y: 0 }}
+                animate={{ y: '-100%' }}
+                transition={{ duration: 0.5, delay: 1.5 }}
+            >
+            </motion.div>
+            <motion.div
+                className="absolute left-0 top-0 z-10 h-full w-full overflow-hidden bg-white-custom"
+                initial={{  y: 0 }}
+                animate={{  y: '-100%' }}
+                transition={{ duration: 0.3, delay: 4.5 }}
+            >
+            </motion.div>
+
+            <motion.div
+                className="absolute z-30"
                 initial={{
                     left: '5%',    // Start near the left edge
                     bottom: '5%',  // Start near the bottom edge
@@ -20,13 +30,13 @@ const IntroAnimation = () => {
                     originY: 0,
                 }}
                 animate={{
-                    left: '5%',    // Stay aligned to the left
-                    bottom: '70%', // Move upward (70% of the parent container's height)
-                    scale: 1,      // Shrink to normal size
+                    bottom: ['5%', '5%', '40%', '40%', '50%'], // Move upward (70% of the parent container's height)
+                    scale: [1.5, 1.5, 1, 1, 1],      // Shrink to normal size
                 }}
                 transition={{
-                    duration: 0.75,   // Animation duration
-                    delay: 0.8,      // Start after 1 second
+                    times: [0, 0.2, 0.4, 0.42],
+                    duration: 3.5,   // Animation duration
+                    delay: 0,      // Start after 1 second
                     ease: [0.43, 0.13, 0.23, 0.96], // Smooth easing
                 }}
             >
@@ -42,11 +52,11 @@ const IntroAnimation = () => {
                         transition={{
                             times: [0, 0.1, 0.8, 0.9],
                             delay: 0,
-                            duration: 3,
+                            duration: 3.0,
                             ease: [0.43, 0.13, 0.23, 0.96], // Smooth easing
                         }}
                     >
-                        <h1 className="text-5xl font-extrabold text-off-white md:text-9xl">
+                        <h1 className="text-5xl font-extrabold text-black-custom md:text-9xl">
                             We think
                         </h1>
                     </motion.div>
@@ -62,13 +72,13 @@ const IntroAnimation = () => {
                         }}
                         transition={{
                             times: [0, 0.1, 0.9, 1.0],
-                            delay: 3,
+                            delay: 2.7,
                             duration: 2,
                             ease: [0.43, 0.13, 0.23, 0.96], // Smooth easing
                         }}
                     >
-                        <h1 className="text-5xl font-extrabold text-off-white md:text-9xl">
-                            Vote <span className='text-red-500'>TESSA SMITH</span>
+                        <h1 className="text-5xl font-extrabold text-black-custom md:text-9xl">
+                            Vote <span className='text-red-custom'>TESSA SMITH</span>
                         </h1>
                     </motion.div>
                 </div>
@@ -80,21 +90,43 @@ const IntroAnimation = () => {
                             y: '100%',
                         }}
                         animate={{
-                            y: '0%',
+                            y: ['100%', '0%', '0%', '-110%']
                         }}
                         transition={{
-                            duration: 0.5,
-                            delay: 1.3, // Delayed appearance after the first line
+                            times: [0, 0.1, 0.7, 0.9],
+                            duration: 2.0,
+                            delay: 1.0, // Delayed appearance after the first line
                             ease: [0.43, 0.13, 0.23, 0.96], // Smooth easing
                         }}
                     >
-                        <h1 className="text-5xl font-extrabold text-off-white md:text-9xl">
+                        <h1 className="text-5xl font-extrabold text-black-custom md:text-9xl">
                             It's time to speak
                         </h1>
                     </motion.div>
                 </div>
+                <div className="relative h-[3rem] overflow-hidden md:h-[8rem]">
+                    <motion.div
+                        initial={{
+                            y: '100%',
+                        }}
+                        animate={{
+                            y: ['100%', '0%', '0%', '-100%']
+                        }}
+                        transition={{
+                            times: [0, 0.1, 0.7, 0.9],
+                            duration: 2.0,
+                            delay: 1.0, // Delayed appearance after the first line
+                            ease: [0.43, 0.13, 0.23, 0.96], // Smooth easing
+                        }}
+                    >
+                        <h1 className="text-5xl font-extrabold text-black-custom md:text-9xl">
+                            Your voice matters
+                        </h1>
+                    </motion.div>
+                </div>
             </motion.div>
-        </motion.div>
+        </div>
+
     );
 };
 export default IntroAnimation;
