@@ -1,9 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-/*
-Intro animation for the landing page using Framer Motion.
-*/
+
 const IntroAnimation = () => {
     return (
         <motion.div
@@ -33,24 +31,44 @@ const IntroAnimation = () => {
                 }}
             >
                 {/* First line of text */}
+                <div className="absolute h-[3rem] overflow-hidden md:h-[8rem]">
+                    <motion.div
+                        initial={{
+                            y: '100%',
+                        }}
+                        animate={{
+                            y: ['100%', '0%', '0%', '-100%']
+                        }}
+                        transition={{
+                            times: [0, 0.1, 0.8, 0.9],
+                            delay: 0,
+                            duration: 3,
+                            ease: [0.43, 0.13, 0.23, 0.96], // Smooth easing
+                        }}
+                    >
+                        <h1 className="text-5xl font-extrabold text-off-white md:text-9xl">
+                            We think
+                        </h1>
+                    </motion.div>
+                </div>
+
                 <div className="relative h-[3rem] overflow-hidden md:h-[8rem]">
                     <motion.div
                         initial={{
                             y: '100%',
                         }}
                         animate={{
-                            y: '0%',
-                        }}
-                        exit={{
-                            y: '-100%', // Move up and disappear
+                            y: ['100%', '0%', '0%', '-100%']
                         }}
                         transition={{
-                            duration: 0.5,
+                            times: [0, 0.1, 0.9, 1.0],
+                            delay: 3,
+                            duration: 2,
                             ease: [0.43, 0.13, 0.23, 0.96], // Smooth easing
                         }}
                     >
                         <h1 className="text-5xl font-extrabold text-off-white md:text-9xl">
-                            We think
+                            Vote <span className='text-red-500'>TESSA SMITH</span>
                         </h1>
                     </motion.div>
                 </div>
@@ -63,9 +81,6 @@ const IntroAnimation = () => {
                         }}
                         animate={{
                             y: '0%',
-                        }}
-                        exit={{
-                            y: '-100%', // Move up and disappear
                         }}
                         transition={{
                             duration: 0.5,
@@ -82,5 +97,4 @@ const IntroAnimation = () => {
         </motion.div>
     );
 };
-
 export default IntroAnimation;
