@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-
-const IntroAnimation = () => {
+const IntroAnimation: React.FC = () => {
     return (
         <div className="absolute left-0 top-0 h-full w-full overflow-hidden">
             <motion.div
@@ -34,8 +33,8 @@ const IntroAnimation = () => {
                     scale: [1.5, 1.5, 1, 1, 1],      // Shrink to normal size
                 }}
                 transition={{
-                    times: [0, 0.2, 0.4, 0.42],
-                    duration: 3.5,   // Animation duration
+                    times: [0, 0.35, 0.6, 0.8, 1.0],
+                    duration: 3.0,   // Animation duration
                     delay: 0,      // Start after 1 second
                     ease: [0.43, 0.13, 0.23, 0.96], // Smooth easing
                 }}
@@ -104,6 +103,7 @@ const IntroAnimation = () => {
                         </h1>
                     </motion.div>
                 </div>
+                {/* Third line of text */}
                 <div className="relative h-[3rem] overflow-hidden md:h-[8rem]">
                     <motion.div
                         initial={{
