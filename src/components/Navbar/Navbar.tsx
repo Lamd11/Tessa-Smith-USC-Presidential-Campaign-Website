@@ -1,8 +1,7 @@
 import React from 'react';
 import { MenuButton } from './MenuButton';
 import Button from '@mui/material/Button'
-
-
+import AnimatedText from './AnimatedText';
 
 const Navbar = () => {
     const [isOpen, setOpen] = React.useState(false);
@@ -24,6 +23,7 @@ const Navbar = () => {
                     height="24"
                     style={menuButtonStyle}
                 />
+                <AnimatedText />
                 <Button
                     variant="contained"
                     size="large"

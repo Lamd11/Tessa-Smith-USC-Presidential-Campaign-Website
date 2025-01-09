@@ -89,7 +89,7 @@ const IntroAnimation: React.FC = () => {
                             y: '100%',
                         }}
                         animate={{
-                            y: ['100%', '0%', '0%', '-110%']
+                            y: ['100%', '0%', '0%', '-115%']
                         }}
                         transition={{
                             times: [0, 0.1, 0.7, 0.9],
