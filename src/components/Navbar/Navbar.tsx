@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuButton } from './MenuButton';
 import Button from '@mui/material/Button'
 import AnimatedText from './AnimatedText';
+import Menu from './Menu';
 
 const Navbar = () => {
     const [isOpen, setOpen] = React.useState(false);
@@ -11,7 +12,12 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-[90%] rounded-xl bg-white-custom bg-opacity-70 backdrop-blur-sm">
+        <>
+        {/* Background Overlay */}
+        {isOpen && (
+                <div className="z-19 fixed inset-0 h-full w-full bg-blue-custom opacity-100 transition-opacity duration-300 md:opacity-0"></div>
+            )}
+        <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-[90%] flex-col rounded-xl bg-white-custom bg-opacity-70 backdrop-blur-sm">
             <div className="mx-auto flex flex-wrap items-center justify-between p-4">
                 <MenuButton
                     isOpen={isOpen}
@@ -39,7 +45,10 @@ const Navbar = () => {
                     VOTE NOW
                 </Button>
             </div>
+            {isOpen && <Menu isOpen={isOpen} sections={['Home', 'About', 'Promises', 'Contact']} />}
         </nav>
+        </>
+        
     )
 }
 
