@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Navbar from '../Navbar/Navbar'
 
 interface LandingProps {
   title: string;
@@ -11,8 +12,8 @@ interface LandingProps {
 const Landing: React.FC<LandingProps> = ({ title, description, image }) => {
   return (
 
-    <div className="text-white relative flex h-screen w-full items-center justify-center overflow-hidden bg-off-white text-center">\
-
+    <div className="text-white relative flex h-screen w-full justify-center overflow-hidden bg-off-white text-center">\
+      <Navbar />
       {/* This is the landing image */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div

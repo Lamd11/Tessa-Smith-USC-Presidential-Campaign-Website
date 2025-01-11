@@ -15,9 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <IntroAnimation/>
-      <Navbar />
-      <Landing title="TESSA SMITH" description="USC President" image="/images/tessa_smith_landing.jpg"/>
+      <Landing title="TESSA SMITH" description="USC President" image="/images/tessa_smith_landing.jpg" />\
       <Promises promises={promisesList} />
       <About />
       <Contact />

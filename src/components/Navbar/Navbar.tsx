@@ -11,8 +11,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-white sticky top-0 mt-2 rounded-md bg-opacity-50 backdrop-blur-sm">
-            <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
+        <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-[90%] rounded-xl bg-white-custom bg-opacity-70 backdrop-blur-sm">
+            <div className="mx-auto flex flex-wrap items-center justify-between p-4">
                 <MenuButton
                     isOpen={isOpen}
                     onClick={() => setOpen(!isOpen)}
