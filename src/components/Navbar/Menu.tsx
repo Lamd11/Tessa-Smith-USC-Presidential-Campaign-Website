@@ -2,15 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-
-
-
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 interface MenuProps {
     isOpen: boolean
     sections: string[];
 }
 
 const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
+
+    const handleScroll = (sectionId: string) => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         // The container
         <motion.div
@@ -41,6 +44,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
                         key={index}
                         className="relative flex cursor-pointer justify-between py-4"
                         whileHover="hover"
+                        onClick={() => handleScroll(section.toLowerCase())}
                     >
                         {/* Links */}
                         <span className='text-gray-800 relative z-10 ml-8 text-3xl font-medium'>
@@ -86,8 +90,9 @@ const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
             {/* Box 2. Email directory*/}
             <div className="relative mt-4 flex items-start rounded-3xl bg-grey-custom p-4 shadow-lg transition-colors duration-500 hover:bg-navy-blue-custom hover:ease-in-out">
                 <motion.div
-                    className='relative flex h-full w-full cursor-pointer justify-start py-4'
+                    className='relative flex h-full w-full cursor-pointer justify-between py-4'
                     whileHover="hover"
+                    onClick={() => window.open("mailto:xyz@yourapplicationdomain.com")}
                 >
                     <motion.div
                         className="absolute ml-8 text-3xl text-white-custom"
@@ -121,6 +126,12 @@ const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
                         }}>
                         Let's Talk
                     </motion.div>
+                    <FontAwesomeIcon 
+                        className='my-auto mr-8'
+                        icon={faEnvelope}
+                        size="xl"
+                        color="white"
+                    />
                 </motion.div>
             </div>
 
