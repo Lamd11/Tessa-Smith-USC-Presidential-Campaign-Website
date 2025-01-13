@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { easeInOut } from 'motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+
 
 interface MenuProps {
     isOpen: boolean
@@ -9,33 +12,117 @@ interface MenuProps {
 
 const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
     return (
+        // The container
         <motion.div
-            className="fixed left-0 right-0 z-50 rounded-2xl bg-white-custom text-left md:right-auto"
+            className="fixed left-0 right-0 z-50 w-full text-left md:left-auto md:w-[23%]"
             initial="hidden"
             animate={isOpen ? "visible" : "hidden"}
+            exit="hidden" // Optional, to specify how it behaves when removed
             variants={{
                 hidden: {
                     opacity: 0,
-                    y: "50%",
+                    y: "50%", // Move down when hidden
                 },
                 visible: {
                     opacity: 1,
-                    y: "0%",
-                }
+                    y: "0%", // Move up when visible
+                },
             }}
             transition={{
                 duration: 0.3,
                 ease: "easeInOut",
             }}
         >
-            <div className="p-4">
+            {/* Box 1. The one with the links*/}
+            <div className="rounded-3xl bg-white-custom p-4 shadow-lg">
+                {/* Links being styled*/}
                 {sections.map((section, index) => (
-                    <div key={index} className="text-gray-800 ml-4 py-2 text-2xl font-bold">
-                        {section}
-                    </div>
+                    <motion.div
+                        key={index}
+                        className="relative flex cursor-pointer justify-between py-4"
+                        whileHover="hover"
+                    >
+                        {/* Links */}
+                        <span className='text-gray-800 relative z-10 ml-8 text-3xl font-medium'>
+                            {section}
+                        </span>
+                        {/* Background Colour */}
+                        <motion.div
+                            className="absolute inset-0 z-0 rounded-[3rem] bg-light-blue-custom"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            variants={{
+                                hover: {
+                                    opacity: 1,
+                                    scale: 1
+                                }
+                            }}
+                            transition={{
+                                duration: 0.15,
+                                ease: "easeInOut",
+                            }}
+                        />
+                        {/* Arrow symbol */}
+                        <motion.div
+                            className="relative z-10 my-auto mr-8"
+                            initial={{ opacity: 0, scale: 0 }}
+                            variants={{
+                                hover: {
+                                    scale: 1,
+                                    opacity: 1,
+                                }
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeInOut",
+                            }}>
+                            <FontAwesomeIcon
+                                icon={faArrowRight}
+                                size="xl"
+                            />
+                        </motion.div>
+                    </motion.div>
                 ))}
             </div>
-            
+            {/* Box 2. Email directory*/}
+            <div className="relative mt-4 flex items-start rounded-3xl bg-grey-custom p-4 shadow-lg transition-colors duration-500 hover:bg-navy-blue-custom hover:ease-in-out">
+                <motion.div
+                    className='relative flex h-full w-full cursor-pointer justify-start py-4'
+                    whileHover="hover"
+                >
+                    <motion.div
+                        className="absolute ml-8 text-3xl text-white-custom"
+                        initial={{ opacity: 0, x: "-100%" }}
+                        variants={{
+                            hover: {
+                                opacity: 1,
+                                x: "-20%",
+                            }
+                        }}
+                        transition={{
+                            duration: 0.3,
+                            ease: "easeInOut",
+                        }}>
+                        <FontAwesomeIcon
+                            icon={faArrowRight}
+                            size="xs"
+                        />
+                    </motion.div>
+                    <motion.div
+                        className="relative ml-8 text-3xl text-white-custom"
+                        initial={{ x: "0%" }}
+                        variants={{
+                            hover: {
+                                x: "20%"
+                            }
+                        }}
+                        transition={{
+                            duration: 0.3,
+                            ease: "easeInOut",
+                        }}>
+                        Let's Talk
+                    </motion.div>
+                </motion.div>
+            </div>
 
         </motion.div>
     );
