@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -17,7 +17,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
     return (
         // The container
         <motion.div
-            className="fixed left-0 right-0 z-50 w-full text-left md:left-auto md:w-[23%]"
+            className="fixed left-0 right-0 z-50 mt-4 w-full text-left md:left-auto md:w-[23%]"
             initial="hidden"
             animate={isOpen ? "visible" : "hidden"}
             exit="hidden" // Optional, to specify how it behaves when removed
@@ -52,7 +52,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
                         </span>
                         {/* Background Colour */}
                         <motion.div
-                            className="absolute inset-0 z-0 rounded-[3rem] bg-light-blue-custom"
+                            className="absolute inset-0 z-0 rounded-[3rem] bg-lavender-custom"
                             initial={{ opacity: 0, scale: 0.9 }}
                             variants={{
                                 hover: {
@@ -88,7 +88,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
                 ))}
             </div>
             {/* Box 2. Email directory*/}
-            <div className="relative mt-4 flex items-start rounded-3xl bg-grey-custom p-4 shadow-lg transition-colors duration-500 hover:bg-navy-blue-custom hover:ease-in-out">
+            <div className="relative mt-4 flex items-start rounded-3xl bg-dark-pink-custom p-4 shadow-lg transition-colors duration-500 hover:bg-red-custom hover:ease-in-out">
                 <motion.div
                     className='relative flex h-full w-full cursor-pointer justify-between py-4'
                     whileHover="hover"

@@ -1,50 +1,101 @@
-import React from 'react';
-import { MenuButton } from './MenuButton';
+import React, { useState, useEffect } from "react";
 import Button from '@mui/material/Button'
 import AnimatedText from './AnimatedText';
 import Menu from './Menu';
 import { AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
+
+    const [showNavbar, setShowNavbar] = useState(false);
+
     const [isOpen, setOpen] = React.useState(false);
 
-    const menuButtonStyle = {
-        marginLeft: "2rem"
+    const circleVariants = {
+        closed: { rotate: 0 },
+        open: { rotate: 90 },
     };
 
     return (
         <>
             {/* Background Overlay */}
             {isOpen && (
-                <div className="z-19 fixed inset-0 h-full w-full bg-blue-custom opacity-100 transition-opacity duration-300 md:opacity-0"></div>
+                <div className="fixed inset-0 z-20 h-full w-full bg-peach-custom opacity-100 transition-opacity duration-300 md:opacity-0"></div>
             )}
             <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-[90%] flex-col rounded-xl bg-white-custom bg-opacity-70 backdrop-blur-sm">
                 <div className="mx-auto flex flex-wrap items-center justify-between p-4">
-                    <Button
-                        variant="contained"
-                        size="large"
-                        style={{
-                            backgroundColor: "#0A21C0", // Blue-custom
-                            color: "#F0F1FA", // Off-white
-                            padding: "12px 36px",
-                            fontWeight: "bold",
-                            fontSize: "18px",
-                            borderRadius: "30px",
-                        }}
-                    >
-                        VOTE NOW
-                    </Button>
                     <AnimatedText />
-                    <MenuButton
-                        isOpen={isOpen}
-                        onClick={() => setOpen(!isOpen)}
-                        strokeWidth="4"
-                        color="#3399cc"
-                        transition={{ ease: "easeOut", duration: 0.2 }}
-                        width="64"
-                        height="24"
-                        style={menuButtonStyle}
-                    />
+                    <div className="space-x-4">
+                        <Button
+                            className="hidden sm:block"
+                            variant="contained"
+                            size="large"
+                            sx={{
+                                backgroundColor: "#FF5C5C", // Red-custom
+                                color: "#FFFFFF", // White-custom
+                                padding: {
+                                    xs: "8px 20px", // Small screens
+                                    sm: "10px 28px", // Medium screens
+                                    md: "12px 36px", // Larger screens
+                                },
+                                fontWeight: "bold",
+                                fontSize: {
+                                    xs: "14px", // Small screens
+                                    sm: "16px", // Medium screens
+                                    md: "18px", // Larger screens
+                                },
+                                borderRadius: "30px",
+                                "&:hover": {
+                                    backgroundColor: "#FF1010", // Darker Red on hover
+                                },
+                            }}
+                        >
+                            VOTE
+                        </Button>
+                        {/* pink-custom for menu button */}
+                        <Button
+                            onClick={() => setOpen(!isOpen)}
+                            variant="contained"
+                            size="large"
+                            sx={{
+                                backgroundColor: isOpen ? "#FF3968" : "#FF85A2", // Darker pink when open, light pink otherwise
+                                color: "#F9F3F3", // Off-white"
+                                padding: {
+                                    xs: "8px 20px", // Small screens
+                                    sm: "10px 28px", // Medium screens
+                                    md: "12px 36px", // Larger screens
+                                },
+                                fontWeight: "bold",
+                                fontSize: {
+                                    xs: "14px", // Small screens
+                                    sm: "16px", // Medium screens
+                                    md: "18px", // Larger screens
+                                },
+                                borderRadius: "30px",
+                                "&:hover": {
+                                    backgroundColor: isOpen ? "#FF3968" : "#FF3968", // Slightly lighter pink when hovered
+                                },
+                                "&:active": {
+                                    backgroundColor: isOpen ? "#FFD1DC" : "#FF3968", // Slightly darker pink when clicked
+                                },
+                            }}
+                        >
+                            <h3 className="text-l mr-2 hidden sm:block">MENU</h3>
+                            <motion.div
+                                className="space-x-1 align-middle"
+                                animate={isOpen ? "open" : "closed"}
+                                variants={circleVariants}
+                                transition={{
+                                    ease: "easeInOut",
+                                    duration: 0.3,
+                                }}
+                            >
+                                <div className="inline-block h-2 w-2 justify-center rounded-full bg-off-white align-middle" />
+                                <div className="inline-block h-2 w-2 justify-center rounded-full bg-off-white align-middle" />
+                            </motion.div>
+                        </Button>
+                    </div>
+
                 </div>
                 <AnimatePresence>
                     {isOpen && (

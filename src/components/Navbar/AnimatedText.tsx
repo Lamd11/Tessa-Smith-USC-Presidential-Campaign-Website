@@ -15,7 +15,6 @@ const AnimatedText: React.FC = () => {
                     visible: {
                         transition: {
                             staggerChildren: 0.25,
-                            delayChildren: 5,
                         }
                     }
                 }}
@@ -54,7 +53,6 @@ const AnimatedText: React.FC = () => {
                     visible: {
                         transition: {
                             staggerChildren: 0.25,
-                            delayChildren: 5,
                         }
                     }
                 }}

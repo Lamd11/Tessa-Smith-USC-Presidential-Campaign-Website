@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
 import Navbar from '../Navbar/Navbar'
 
@@ -10,10 +10,19 @@ interface LandingProps {
 
 
 const Landing: React.FC<LandingProps> = ({ title, description, image }) => {
+
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    // Show navbar after the intro animation (adjust duration + delay if needed)
+    const timeout = setTimeout(() => setShowNavbar(true), 4500);
+    return () => clearTimeout(timeout); // Cleanup timeout on component unmount
+  }, []);
+
   return (
 
     <div className="text-white relative flex h-screen w-full justify-center overflow-hidden bg-off-white text-center">\
-      <Navbar />
+      {showNavbar && <Navbar />}
       {/* This is the landing image */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div

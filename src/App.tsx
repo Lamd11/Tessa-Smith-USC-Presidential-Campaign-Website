@@ -14,6 +14,7 @@ function App() {
 
   return (
     <div className="App">
+      <IntroAnimation />
       {/* Had to add id's so I can scroll to them without affecting the component id props. Used div for simplicity lol. */}
       <div id="landing">
         <Landing
