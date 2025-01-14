@@ -5,7 +5,7 @@ const IntroAnimation: React.FC = () => {
     return (
         <div className="absolute left-0 top-0 h-full w-full overflow-hidden">
             <motion.div
-                className="bg-light-blue-custom absolute left-0 top-0 z-20 h-full w-full overflow-hidden"
+                className="absolute left-0 top-0 z-20 h-full w-full overflow-hidden bg-light-pink-custom"
                 initial={{ y: 0 }}
                 animate={{ y: '-100%' }}
                 transition={{ duration: 0.5, delay: 1.5 }}
@@ -29,12 +29,12 @@ const IntroAnimation: React.FC = () => {
                     originY: 0,
                 }}
                 animate={{
-                    bottom: ['5%', '5%', '40%', '40%', '50%'], // Move upward (70% of the parent container's height)
+                    bottom: ['5%', '5%', '30%', '30%', '55%'], // Move upward (70% of the parent container's height)
                     scale: [1.5, 1.5, 1, 1, 1],      // Shrink to normal size
                 }}
                 transition={{
                     times: [0, 0.35, 0.6, 0.8, 1.0],
-                    duration: 3.0,   // Animation duration
+                    duration: 2.4,   // Animation duration
                     delay: 0,      // Start after 1 second
                     ease: [0.43, 0.13, 0.23, 0.96], // Smooth easing
                 }}
