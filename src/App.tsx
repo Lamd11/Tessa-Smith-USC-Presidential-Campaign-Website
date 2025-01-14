@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Landing from './components/Landing/Landing';
 import Promises from './components/Promises';
-import Contact from './components/Contact';
+import Contact from './components/Contact/Contact';
 import About from './components/About';
 import IntroAnimation from './components/IntroAnimation';
 
