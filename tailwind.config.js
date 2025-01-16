@@ -15,6 +15,11 @@ module.exports = {
       'white-custom': '#FFFFFF',        // Standard white
       'lavender-custom': '#E6E6FA',     // Lavender for soft complementary tones
       'red-custom': '#FF5C5C',          // A red-pink hybrid for warnings or CTA
+      'blue-custom': '#1D4ED8',         // Primary blue for Facebook
+      'light-blue-custom': '#93C5FD',   // Light blue for hover effects
+      'dark-blue-custom': '#1E3A8A',    // Darker blue for LinkedIn
+      'green-custom': '#10B981',        // Green for Linktree
+      'light-green-custom': '#6EE7B7',  // Light green for hover effects
     },
     extend: {},
   },

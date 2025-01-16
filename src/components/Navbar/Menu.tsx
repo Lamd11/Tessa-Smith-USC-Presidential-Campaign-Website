@@ -17,7 +17,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
     return (
         // The container
         <motion.div
-            className="fixed left-0 right-0 z-50 mt-4 w-full text-left md:left-auto md:w-[23%]"
+            className="fixed left-0 right-0 z-50 mx-auto mt-4 w-11/12 text-left md:left-auto md:w-[23%]"
             initial="hidden"
             animate={isOpen ? "visible" : "hidden"}
             exit="hidden" // Optional, to specify how it behaves when removed

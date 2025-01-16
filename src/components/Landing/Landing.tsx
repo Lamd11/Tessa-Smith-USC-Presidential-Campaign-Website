@@ -14,7 +14,7 @@ const Landing: React.FC<LandingProps> = ({ title, description, image }) => {
 
   return (
 
-    <div className="text-white relative flex h-screen w-full justify-center overflow-hidden bg-off-white text-center">\
+    <div className="text-white relative flex h-screen w-full justify-center overflow-hidden bg-off-white text-center">
       {/* This is the landing image */}
       <Navbar/>
       <div className="absolute inset-0 flex items-center justify-center">

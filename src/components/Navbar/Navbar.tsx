@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Button from '@mui/material/Button'
 import AnimatedText from './AnimatedText';
 import Menu from './Menu';
@@ -6,8 +6,6 @@ import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
-
-    const [showNavbar, setShowNavbar] = useState(false);
 
     const [isOpen, setOpen] = React.useState(false);
 
@@ -22,7 +20,7 @@ const Navbar = () => {
             {isOpen && (
                 <div className="fixed inset-0 z-20 h-full w-full bg-peach-custom opacity-100 transition-opacity duration-300 md:opacity-0"></div>
             )}
-            <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-[90%] flex-col rounded-xl bg-white-custom bg-opacity-70 backdrop-blur-sm">
+            <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-[90%] flex-col">
                 <div className="mx-auto flex flex-wrap items-center justify-between p-4">
                     <AnimatedText />
                     <div className="space-x-4">
