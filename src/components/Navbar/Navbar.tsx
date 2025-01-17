@@ -100,7 +100,7 @@ const Navbar = () => {
                         <Menu
                             isOpen={isOpen}
                             setOpen={setOpen}
-                            sections={['Home', 'About', 'Promises', 'Contact']}
+                            sections={['Home', 'About', 'Platform', 'Contact']}
                         />
                     )}
                 </AnimatePresence>

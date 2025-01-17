@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Landing from './components/Landing/Landing';
-import Promises from './components/Promises';
+import Platform from './components/Platform/Platform';
 import Contact from './components/Contact/Contact';
 import About from './components/About';
 import IntroAnimation from './components/IntroAnimation';
+import Footer from './components/Footer';
 
 function App() {
-  const promisesList = [
-    "Reduce tuition fees.",
-    "Improve mental health services.",
-    "Promote diversity and inclusion."
-  ];
-
   const [showComponents, setShowComponents] = useState(false);
 
   useEffect(() => {
@@ -21,27 +16,30 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App h-screen">
       <IntroAnimation />
       {/* Had to add id's so I can scroll to them without affecting the component id props. Used div for simplicity lol. */}
-      {showComponents && <>
-        <div id="landing">
-          <Landing
-            title="TESSA SMITH"
-            description="USC President"
-            image="/images/tessa_smith_landing.jpg"
-          />
-        </div>
-        <div id="promises">
-          <Promises promises={promisesList} />
-        </div>
-        <div id="about">
-          <About />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
-      </>}
+      {showComponents && 
+        <>
+          <div id="landing" className="min-h-screen">
+            <Landing
+              title="TESSA SMITH"
+              description="USC President"
+              image="/images/tessa_smith_landing.jpg"
+            />
+          </div>
+          <div id="platform" className="min-h-screen">
+            <Platform />
+          </div>
+          <div id="about">
+            <About />
+          </div>
+          <div id="contact" className="min-h-screen">
+            <Contact />
+          </div>
+          <Footer />
+        </>
+      }
     </div>
   );
 }

@@ -7,12 +7,12 @@ import { motion } from 'framer-motion'; // Import Framer Motion
 
 const Contact: React.FC = () => {
   return (
-    <div className="flex h-[100vh] w-[100vw] flex-col items-center bg-white-custom">
-      <h1 className="mx-auto mt-4 text-3xl font-bold text-black-custom sm:text-4xl md:text-5xl lg:text-7xl">
+    <div className="flex min-h-screen w-full flex-col items-center bg-white-custom">
+      <h1 className="mx-auto my-auto text-3xl font-bold text-black-custom sm:text-4xl md:text-5xl lg:text-7xl">
         Contact
       </h1>
       {/* Main Content */}
-      <div className="flex h-full w-full flex-col sm:flex-row">
+      <div className="my-auto flex h-full w-full flex-col sm:flex-row">
         {/* Email Section */}
         <div className="left-auto mx-auto my-auto flex h-1/2 w-full flex-col justify-center">
           <div className="mx-auto space-y-4 text-left">
