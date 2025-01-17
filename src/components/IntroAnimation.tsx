@@ -77,7 +77,7 @@ const IntroAnimation: React.FC = () => {
                         }}
                     >
                         <h1 className="text-5xl font-extrabold text-black-custom md:text-9xl">
-                            Vote <span className='text-red-custom'>TESSA SMITH</span>
+                            Vote <span className='text-red-custom'>TESSA</span>
                         </h1>
                     </motion.div>
                 </div>

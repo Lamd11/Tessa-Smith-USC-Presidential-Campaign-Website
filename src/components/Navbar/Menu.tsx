@@ -6,12 +6,14 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 interface MenuProps {
     isOpen: boolean
     sections: string[];
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Menu: React.FC<MenuProps> = ({ isOpen, sections }) => {
+const Menu: React.FC<MenuProps> = ({ isOpen, setOpen, sections }) => {
 
     const handleScroll = (sectionId: string) => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+        setOpen(false);
     };
 
     return (

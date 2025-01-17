@@ -40,28 +40,28 @@ const Contact: React.FC = () => {
                   name: 'Instagram',
                   icon: faInstagram,
                   url: 'https://www.instagram.com/councillor_tessasmith/',
-                  bgColor: 'bg-pink-custom',
+                  bgColor: 'text-pink-custom',
                   hoverColor: 'hover:bg-light-pink-custom',
                 },
                 {
                   name: 'Facebook',
                   icon: faFacebook,
                   url: 'https://www.facebook.com/profile.php?id=100056419703516',
-                  bgColor: 'bg-blue-custom',
+                  bgColor: 'text-blue-custom',
                   hoverColor: 'hover:bg-light-blue-custom',
                 },
                 {
                   name: 'LinkedIn',
                   icon: faLinkedin,
                   url: 'https://www.linkedin.com/in/example',
-                  bgColor: 'bg-dark-blue-custom',
+                  bgColor: 'text-dark-blue-custom',
                   hoverColor: 'hover:bg-light-blue-custom',
                 },
                 {
                   name: 'Linktree',
                   icon: faLink,
                   url: 'https://linktr.ee/vote_tessasmith',
-                  bgColor: 'bg-green-custom',
+                  bgColor: 'text-green-custom',
                   hoverColor: 'hover:bg-light-green-custom',
                 },
               ].map((social, index) => (
@@ -73,11 +73,11 @@ const Contact: React.FC = () => {
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 * index, type: 'spring', stiffness: 50 }}
-                  className={`flex items-center space-x-4 w-full rounded-lg p-4 shadow-md ${social.bgColor} ${social.hoverColor} hover:shadow-lg`}
+                  className={`flex w-full items-center space-x-4 rounded-lg p-4 shadow-md hover:shadow-lg ${social.hoverColor}`}
                 >
                   <div className='text-white flex items-center space-x-4'>
-                    <FontAwesomeIcon className="w-2/12 text-lg sm:text-xl md:text-2xl lg:text-3xl" icon={social.icon} />
-                    <span className="text-lg font-semibold sm:text-xl md:text-2xl lg:text-3xl">{social.name}</span>
+                    <FontAwesomeIcon className={`w-2/12 text-lg sm:text-xl md:text-2xl lg:text-3xl ${social.bgColor}`} icon={social.icon} />
+                    <span className={`text-lg font-semibold sm:text-xl md:text-2xl lg:text-3xl ${social.bgColor}`}>{social.name}</span>
                   </div>
                 </motion.li>
               ))}

@@ -99,6 +99,7 @@ const Navbar = () => {
                     {isOpen && (
                         <Menu
                             isOpen={isOpen}
+                            setOpen={setOpen}
                             sections={['Home', 'About', 'Promises', 'Contact']}
                         />
                     )}
