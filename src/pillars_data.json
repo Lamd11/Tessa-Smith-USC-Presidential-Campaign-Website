@@ -1,0 +1,83 @@
+{
+    "pillars": [
+        {
+            "title": "Communication",
+            "content": {
+                "introduction": "Making the USC more accessible to and more known by the student body.\n\nI will work towards this by publicising my activities as a councillor on social media and communicating actively with students through social media and in person about the activities of the USC. This will help students access USC services better and will also generate more interest in student government and politics.",
+                "details": [
+                    {
+                        "heading": "Publicizing Councillor Activities",
+                        "points": [
+                            "Publicising my activities as a councillor on social media.",
+                            "Communicating actively with students about USC activities to generate interest in student government."
+                        ]
+                    },
+                    {
+                        "heading": "Hosting Coffee Chats",
+                        "points": [
+                            "Holding regular drop-in \u2018coffee chats\u2019 where people can discuss comments, questions, or concerns about student government or school policies."
+                        ]
+                    },
+                    {
+                        "heading": "Collaboration with Third Parties",
+                        "points": [
+                            "Assisting students with renting apartments.",
+                            "Providing leadership and engagement opportunities with municipal government.",
+                            "Creating forums for student input on local political issues."
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Engagement",
+            "content": {
+                "introduction": "Supporting non-USC affiliated clubs and giving a voice to smaller departments. Promoting networking opportunities and collaboration across the Social Science faculty.\n\nFaculty clubs and unofficial clubs add a lot of value to student life but often find it difficult to promote themselves. Providing a platform for these clubs will allow us to enrich student life.",
+                "details": [
+                    {
+                        "heading": "Supporting Clubs",
+                        "points": [
+                            "Facilitating student discussions with professors, other students, and members of departments.",
+                            "Providing platforms for non-USC affiliated clubs to enrich student life."
+                        ]
+                    },
+                    {
+                        "heading": "Promoting Events",
+                        "points": [
+                            "Promoting meetings and events to hear unique needs of each department.",
+                            "Creating informal forums for course discussions, networking, and mentorship opportunities."
+                        ]
+                    },
+                    {
+                        "heading": "Creating Leadership Opportunities",
+                        "points": [
+                            "Centralizing leadership opportunities across USC, faculty, and external organizations through a leadership hub."
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Serving Students",
+            "content": {
+                "introduction": "Raising awareness about USC services and improving campus eateries.\n\nMany students probably are confused about or haven\u2019t even heard of some services, like: the exam season shuttle, income tax help services, the food bank, Mustang on demand, and many more. Promoting these services will encourage students to reach out for support.",
+                "details": [
+                    {
+                        "heading": "Promoting USC Services",
+                        "points": [
+                            "Raising awareness about services such as the exam season shuttle, income tax help, food banks, and Mustang on demand.",
+                            "Promoting the idea that students can and should reach out to the USC for support in school and campus issues."
+                        ]
+                    },
+                    {
+                        "heading": "Improving Campus Eateries",
+                        "points": [
+                            "Analyzing traffic patterns in campus eateries to optimize hours and offerings.",
+                            "Enhancing service while reducing unnecessary costs by cutting underused products or hours."
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
