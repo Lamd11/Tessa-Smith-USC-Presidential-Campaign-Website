@@ -1,80 +1,106 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVolumeHigh, faNetworkWired, faHandshake } from '@fortawesome/free-solid-svg-icons';
-import InfoSlide from "./InfoSlide";
+import React, { useEffect, useState } from "react";
+import platformData from "./platform_data.json"; // Import JSON
 
+export interface SubSection {
+  id: string;
+  header: string;
+  content: string;
+}
+
+export interface Section {
+  id: string;
+  header: string;
+  subSections: SubSection[];
+}
+
+export interface PlatformCategory {
+  category: string;
+  sections: Section[];
+}
 
 const Platform = () => {
-  const pillars = [
-    {
-      title: "Communication",
-      brief:
-        "Making the USC more accessible and known by the student body. Publicizing councillor activities and engaging with students through coffee chats and social media.",
-      bgColor: "bg-green-custom",
-      textColor: "text-green-custom",
-      icon: faVolumeHigh,
-      content: `I will work towards this by publicising my activities as a councillor on social media...`,
-    },
-    {
-      title: "Engagement",
-      brief:
-        "Supporting non-USC affiliated clubs and giving a voice to smaller departments. Promoting networking opportunities and collaboration across the Social Science faculty.",
-      bgColor: "bg-blue-custom",
-      textColor: "text-blue-custom",
-      icon: faNetworkWired,
-      content: `Faculty clubs and unofficial clubs add a lot of value to student life but often find it difficult to promote themselves...`,
-    },
-    {
-      title: "Serving Students",
-      brief:
-        "Raising awareness about USC services like food banks and exam shuttles. Improving campus eateries and ensuring USC services meet student needs.",
-      bgColor: "bg-pink-custom",
-      textColor: "text-pink-custom",
-      icon: faHandshake,
-      content: `Many students probably are confused about or haven’t even heard of some services, like: The schedule of the exam season shuttle...`,
-    },
-  ];
+  const [isFixed, setIsFixed] = useState(false);
 
-  const [selectedPillar, setSelectedPillar] = useState<number | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById("platform");
+      const navbar = document.getElementById("platform-navbar");
 
-  const handleCardClick = (index: number) => {
-    setSelectedPillar(selectedPillar === index ? null : index); // Toggle slide
-  };
+      if (section && navbar) {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        const currentScroll = window.scrollY;
+
+        if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
+          setIsFixed(true);
+        } else {
+          setIsFixed(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center bg-white-custom">
-      <h1 className="mx-auto my-auto text-3xl font-bold text-black-custom sm:text-4xl md:text-5xl lg:text-7xl">
-        Platform
-      </h1>
-      <div className="my-auto flex flex-wrap justify-center gap-6 p-6">
-        {pillars.map((pillar, index) => (
-          <div
-            key={index}
-            className="group relative flex cursor-pointer flex-col justify-between rounded-lg bg-white-custom shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg sm:w-[300px] md:w-[350px]"
-            onClick={() => handleCardClick(index)}
-          >
-            <div className={`h-8 w-full rounded-t-lg ${pillar.bgColor} sm:h-12`}></div>
-            <div className="relative mb-auto flex flex-col p-6">
-              <FontAwesomeIcon
-                icon={pillar.icon}
-                className={`absolute -top-4 text-2xl p-2 bg-white-custom ${pillar.textColor} rounded-lg`}
-              />
-              <h2 className="group-hover:text-red-500 mb-4 text-2xl font-bold text-black-custom">
-                {pillar.title}
-              </h2>
-              <p className="text-gray-700">{pillar.brief}</p>
+    <div id="platform" className="relative flex min-h-screen flex-col md:flex-row">
+      {/* Navbar */}
+      <div
+        id="platform-navbar"
+        className={`relative top-14 transition-all duration-300 h-[80vh] ${
+          isFixed ? "sticky" : "relative"
+        } w-64 bg-gray-100 shadow-md overflow-hidden`}
+      >
+        <div className="h-full overflow-y-auto p-4">
+          {platformData.map((category: PlatformCategory) => (
+            <div key={category.category} className="mb-6">
+              <h3 className="mb-2 text-lg font-bold">{category.category}</h3>
+              {category.sections.map((section) => (
+                <div key={section.id} className="mb-4">
+                  <a
+                    href={`#${section.id}`}
+                    className="text-blue-500 mb-1 block hover:underline"
+                  >
+                    {section.header}
+                  </a>
+                  {section.subSections.map((subSection) => (
+                    <a
+                      key={subSection.id}
+                      href={`#${subSection.id}`}
+                      className="text-gray-500 block pl-4 hover:underline"
+                    >
+                      {subSection.header}
+                    </a>
+                  ))}
+                </div>
+              ))}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      {selectedPillar !== null && (
-        <InfoSlide
-          title={pillars[selectedPillar].title}
-          content={pillars[selectedPillar].content}
-          isVisible={selectedPillar !== null}
-          onClose={() => setSelectedPillar(null)}
-        />
-      )}
+
+      {/* Content */}
+      <div className="mt-14 flex-1 p-8">
+        {platformData.map((category: PlatformCategory) =>
+          category.sections.map((section) => (
+            <div key={section.id} id={section.id} className="mb-16">
+              <h2 className="mb-4 text-2xl font-bold">{section.header}</h2>
+              {section.subSections.map((subSection) => (
+                <div key={subSection.id} id={subSection.id} className="mb-8">
+                  <h3 className="mb-2 text-xl font-semibold">
+                    {subSection.header}
+                  </h3>
+                  <p className="text-gray-700">
+                    {/* Add content for each subsection here */}
+                    {subSection.content}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ))
+        )}
+      </div>
     </div>
   );
 };

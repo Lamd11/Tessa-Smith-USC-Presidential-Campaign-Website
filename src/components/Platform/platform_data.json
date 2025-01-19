@@ -1,0 +1,169 @@
+[
+  {
+    "category": "Supports",
+    "sections": [
+      {
+        "id": "campus-life",
+        "header": "Campus Life",
+        "subSections": [
+          { 
+            "id": "academic-supports", 
+            "header": "Academic Supports", 
+            "content": "Promoting more accessible academic support options such as mentorship programs, departmental discussions, and networking events."
+          },
+          { 
+            "id": "study-spaces", 
+            "header": "Study Spaces", 
+            "content": "Optimizing the use of campus study spaces by analyzing demand and increasing availability during peak times."
+          },
+          { 
+            "id": "faculty-soph-food", 
+            "header": "Faculty Soph Food", 
+            "content": "Improving campus eateries by reviewing operational hours and product offerings to better suit student needs."
+          },
+          { 
+            "id": "student-creators", 
+            "header": "Student Creators", 
+            "content": "Providing platforms to showcase and support creative student initiatives and projects."
+          }
+        ]
+      },
+      {
+        "id": "off-campus-life",
+        "header": "Off-Campus Life",
+        "subSections": [
+          { 
+            "id": "housing", 
+            "header": "Housing", 
+            "content": "Assisting students with renting apartments and navigating the local housing market."
+          },
+          { 
+            "id": "food-insecurity", 
+            "header": "Food Insecurity", 
+            "content": "Promoting awareness of food insecurity resources such as the campus food bank."
+          },
+          { 
+            "id": "public-transit", 
+            "header": "Public Transit", 
+            "content": "Collaborating with local transit authorities to improve accessibility and affordability for students."
+          }
+        ]
+      },
+      {
+        "id": "life-after-campus",
+        "header": "Life After Campus",
+        "subSections": [
+          { 
+            "id": "possibilities-fair", 
+            "header": "Possibilities Fair", 
+            "content": "Organizing events to connect students with post-graduation opportunities, including career fairs and alumni networking."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Community",
+    "sections": [
+      {
+        "id": "engagement",
+        "header": "Engagement",
+        "subSections": [
+          { 
+            "id": "strategic-promotions", 
+            "header": "Strategic Promotions", 
+            "content": "Enhancing visibility for student events and clubs through targeted campaigns."
+          },
+          { 
+            "id": "limiting-surveys", 
+            "header": "Limiting Surveys", 
+            "content": "Reducing the frequency of surveys while ensuring they address key student concerns."
+          },
+          { 
+            "id": "connecting-student-leaders", 
+            "header": "Connecting Student Leaders", 
+            "content": "Facilitating discussions among student leaders to share best practices and collaborative ideas."
+          },
+          { 
+            "id": "western-roar", 
+            "header": "Western Roar", 
+            "content": "Creating forums for student feedback on university and community policies."
+          },
+          { 
+            "id": "club-systems", 
+            "header": "Club Systems", 
+            "content": "Streamlining the USC club system to improve resource allocation and accessibility for all student organizations."
+          }
+        ]
+      },
+      {
+        "id": "sustainability",
+        "header": "Sustainability",
+        "subSections": [
+          { 
+            "id": "food-waste", 
+            "header": "Food Waste", 
+            "content": "Implementing initiatives to reduce food waste on campus through better planning and partnerships."
+          },
+          { 
+            "id": "sustainable-accessible-food", 
+            "header": "Sustainable and Accessible Food Options", 
+            "content": "Promoting sustainable and affordable food choices for students across campus eateries."
+          },
+          { 
+            "id": "fossil-fuel-divestment", 
+            "header": "Fossil Fuel Divestment", 
+            "content": "Advocating for the university’s divestment from fossil fuel investments."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Culture",
+    "sections": [
+      {
+        "id": "culture-appreciation",
+        "header": "Culture Appreciation",
+        "subSections": [
+          { 
+            "id": "multicultural-events", 
+            "header": "Multicultural Events", 
+            "content": "Hosting events that celebrate the diversity of cultures represented on campus."
+          },
+          { 
+            "id": "indigenous-initiatives", 
+            "header": "Indigenous Initiatives", 
+            "content": "Supporting Indigenous student programs and cultural awareness activities."
+          },
+          { 
+            "id": "supporting-international-students", 
+            "header": "Supporting International Students", 
+            "content": "Enhancing resources for international students to better integrate and succeed."
+          }
+        ]
+      },
+      {
+        "id": "affiliates-small-faculties",
+        "header": "Affiliates and Small Faculties",
+        "subSections": [
+          { 
+            "id": "kings-and-huron", 
+            "header": "Kings and Huron", 
+            "content": "Strengthening partnerships and programs with affiliate colleges."
+          },
+          { 
+            "id": "brescia-transition", 
+            "header": "Brescia Transition", 
+            "content": "Providing support for Brescia College’s transitional programs."
+          },
+          { 
+            "id": "small-faculties", 
+            "header": "Small Faculties", 
+            "content": "Addressing the unique needs of smaller faculties within the university."
+          }
+        ]
+      }
+    ]
+  }
+]
