@@ -20,6 +20,7 @@ export interface PlatformCategory {
 
 const Platform = () => {
   const [isFixed, setIsFixed] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,39 +49,78 @@ const Platform = () => {
       {/* Navbar */}
       <div
         id="platform-navbar"
-        className={`relative top-14 transition-all duration-300 h-[80vh] ${
-          isFixed ? "sticky" : "relative"
-        } w-64 bg-gray-100 shadow-md overflow-y-auto`}
+        className={`${
+          isFixed ? "sticky top-0" : "relative"
+        } md:sticky md:top-10 w-full md:w-64 bg-gray-100 shadow-md z-50`}
       >
-        <ul className="p-4">
-          {platformData.map((category) => (
-            <li key={category.category} className="mb-4">
-              <h3 className="mb-2 text-sm font-bold uppercase">{category.category}</h3>
-              {category.sections.map((section) => (
-                <ul key={section.id} className="ml-4">
-                  <li className="mb-2">
+        {/* Mobile Hamburger Menu */}
+        <div className="text-white z-10 flex items-center justify-between bg-off-white p-4 md:hidden">
+          <h1 className="text-lg font-bold">Platform</h1>
+          <button
+            className="text-white focus:outline-none"
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+          >
+            <svg
+              className="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {isMobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Dropdown Menu */}
+        <div
+          className={`${
+            isMobileMenuOpen ? "block" : "hidden"
+          } md:block h-[80vh] overflow-hidden`}
+        >
+          <div className="h-full overflow-y-auto bg-off-white p-4">
+            {platformData.map((category: PlatformCategory) => (
+              <div key={category.category} className="mb-6">
+                <h3 className="mb-2 text-lg font-bold">{category.category}</h3>
+                {category.sections.map((section) => (
+                  <div key={section.id} className="mb-4">
                     <a
                       href={`#${section.id}`}
-                      className="text-blue-600 hover:underline"
+                      className="text-blue-500 mb-1 block hover:underline"
+                      onClick={() => setIsMobileMenuOpen(false)} // Close menu after click on mobile
                     >
                       {section.header}
                     </a>
-                  </li>
-                  {section.subSections.map((subSection) => (
-                    <li key={subSection.id} className="ml-4">
+                    {section.subSections.map((subSection) => (
                       <a
+                        key={subSection.id}
                         href={`#${subSection.id}`}
-                        className="text-gray-700 text-sm hover:underline"
+                        className="text-gray-500 block pl-4 hover:underline"
+                        onClick={() => setIsMobileMenuOpen(false)} // Close menu after click on mobile
                       >
                         {subSection.header}
                       </a>
-                    </li>
-                  ))}
-                </ul>
-              ))}
-            </li>
-          ))}
-        </ul>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Content */}
