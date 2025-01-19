@@ -6,25 +6,91 @@
         "id": "campus-life",
         "header": "Campus Life",
         "subSections": [
-          { 
-            "id": "academic-supports", 
-            "header": "Academic Supports", 
-            "content": "Promoting more accessible academic support options such as mentorship programs, departmental discussions, and networking events."
+          {
+            "id": "academic-supports",
+            "header": "Academic Supports",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Your experience with academics greatly impacts your enjoyment of student life, so I want to ensure the USC provides as much academic support as possible."
+              },
+              {
+                "type": "list",
+                "items": [
+                  "Promoting existing supports (such as the writing centre, peer support centre, and PrideUSC) by meeting students where they are:",
+                  "Providing a compiled list of major USC and Western supports to student leaders, including USC councillors, senators, and especially faculty and affiliate councils to promote and share with their constituents.",
+                  "Setting up USC booths not only at the UCC but also around other buildings on campus and at affiliates: places that are frequented by students who might not go to the UCC much.",
+                  "Setting up booths and hosting promotional events in collaboration with applicable faculty councils and clubs to reach a wider audience.",
+                  "Moving services temporarily to where students are (e.g. having a booth in the library to help students on the spot with accessing academic accommodations)."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Advocating to Western to standardize the academic accommodations process across faculties and to make it more clear and accessible, in accordance with student reviews and feedback."
+              },
+              {
+                "type": "paragraph",
+                "text": "Working with faculty councils to host events about academic requirements and other helpful information for specific programs. This would also include extensive publicity when degree requirements change, so students are not caught off guard and do not need to rely so much on academic counselling for information."
+              }
+            ]
           },
-          { 
-            "id": "study-spaces", 
-            "header": "Study Spaces", 
-            "content": "Optimizing the use of campus study spaces by analyzing demand and increasing availability during peak times."
+          {
+            "id": "study-spaces",
+            "header": "Study Spaces",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "It is very difficult to find study spaces, and especially quiet study spaces, when you need them. There is a lot the USC can do to improve this through both advocacy and direct action."
+              },
+              {
+                "type": "paragraph",
+                "text": "Advocating for Western to increase study space areas where possible, including by creating a website that displays empty classrooms and indicates their availability for use as study spaces."
+              },
+              {
+                "type": "paragraph",
+                "text": "Continuing to advocate to Western to maintain exam season hours for libraries and eateries until the end of the exam period so students with late exams do not lose access to these resources."
+              },
+              {
+                "type": "paragraph",
+                "text": "During exam seasons, designating the UCC a study space area by opening classrooms and the Mustang Lounge for silent studying, continuing to have tables in the atrium available 24/7, and having coffee, tea, and snacks available at all hours."
+              }
+            ]
           },
-          { 
-            "id": "faculty-soph-food", 
-            "header": "Faculty Soph Food", 
-            "content": "Improving campus eateries by reviewing operational hours and product offerings to better suit student needs."
+          {
+            "id": "faculty-soph-food",
+            "header": "Faculty Soph Food",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Sophs are the people driving the O-Week experience, and their energy and enthusiasm are what makes O-Week so fun and memorable."
+              },
+              {
+                "type": "paragraph",
+                "text": "Giving faculty sophs at least $200 to spend on food on campus. Faculty sophs work long hours for O-Week but do not receive enough food credits to cover all their meals. This increase in food credits benefits sophs as well as first years since their sophs now have the support they need to run O-Week more effectively."
+              }
+            ]
           },
-          { 
-            "id": "student-creators", 
-            "header": "Student Creators", 
-            "content": "Providing platforms to showcase and support creative student initiatives and projects."
+          {
+            "id": "student-creators",
+            "header": "Student Creators",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Western University has a lot of aspiring creators, whether they be musicians, crafters, or small business owners. The USC can help you gain traction by using our platform to promote and support you."
+              },
+              {
+                "type": "paragraph",
+                "text": "Regularly hiring student musicians to play at USC events, including events with promotional booths such as Clubs Week or Movember. This includes setting up a way for music students to find events they want to play at, which will give student musicians exposure and income, and will also attract more people to USC events."
+              },
+              {
+                "type": "paragraph",
+                "text": "Creating a USC-run online \"Mustang Marketplace\" for student-owned small businesses. Students tend to be willing to support and uplift each other, and this platform would enable more community support and engagement for these student-owned businesses. This includes promoting the Mustang Marketplace through USC channels like the website, Instagram, and booths to elevate the platform and increase engagement."
+              },
+              {
+                "type": "paragraph",
+                "text": "Regularly highlighting student creators through Mustang Makers: A weekly feature of a student creative account on the USC Instagram story."
+              }
+            ]
           }
         ]
       },
@@ -32,20 +98,63 @@
         "id": "off-campus-life",
         "header": "Off-Campus Life",
         "subSections": [
-          { 
-            "id": "housing", 
-            "header": "Housing", 
-            "content": "Assisting students with renting apartments and navigating the local housing market."
+          {
+            "id": "housing",
+            "header": "Housing",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Many students are living alone and going through the process of renting, finding roommates, and negotiating leases for the first time. This is incredibly challenging, and the USC should support you through this process as much as possible."
+              },
+              {
+                "type": "paragraph",
+                "text": "Putting booths around campus during peak rental season in tandem with faculty, affiliate, and residence councils to promote housing resources. Many resources already exist to educate students on how to find houses and roommates, how to lease and rent for the first time, and how to deal with issues such as a bad relationship with a landlord, conflict with roommates, or uncertainty about tenant rights (e.g. Off-Campus Housing Services and Community Legal Services). However, these resources are largely unknown to students. Our booths can make these resources available to students who need them immediately."
+              },
+              {
+                "type": "paragraph",
+                "text": "Hosting speed-dating style roommate matching events during peak rental season to help people find compatible roommates and decrease the stress of searching for people to live with. This would involve filling out a survey about living styles (similar to the Western Housing survey for students moving into residence) and then having the opportunity to meet those with compatible answers."
+              },
+              {
+                "type": "paragraph",
+                "text": "Trying to improve the underlying issues that cause unaffordability by prioritizing municipal advocacy on issues like zoning for more affordable housing in London, especially within walking distance of campus."
+              }
+            ]
           },
-          { 
-            "id": "food-insecurity", 
-            "header": "Food Insecurity", 
-            "content": "Promoting awareness of food insecurity resources such as the campus food bank."
+          {
+            "id": "food-insecurity",
+            "header": "Food Insecurity",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "A lot of students at Western are struggling with food insecurity, especially with rising inflation and cost of living. This is another area where the USC’s existing supports can be prioritized, promoted, and expanded to benefit those who need them most."
+              },
+              {
+                "type": "paragraph",
+                "text": "Developing a policy paper on food insecurity to present a unified advocacy front on this issue."
+              },
+              {
+                "type": "paragraph",
+                "text": "Continuing to advocate for Western to take over funding of the food bank. This additional funding would allow for it to be run on a wider scale and benefit more students. In the meantime, we can allocate more of the USC’s funds directly to the food bank to ensure there are sufficient resources to support students in need."
+              },
+              {
+                "type": "paragraph",
+                "text": "Collaborating directly with other food banks, such as KUCSC’s and SOGS’s, and food insecurity advocacy groups on campus where possible. By streamlining the food insecurity efforts from around campus, we can ensure that resources are being used as effectively as possible."
+              }
+            ]
           },
-          { 
-            "id": "public-transit", 
-            "header": "Public Transit", 
-            "content": "Collaborating with local transit authorities to improve accessibility and affordability for students."
+          {
+            "id": "public-transit",
+            "header": "Public Transit",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Thousands of students take public buses to and from school every day, and thousands more use the buses to travel downtown and elsewhere. Our community is therefore significantly affected by the operations of the LTC."
+              },
+              {
+                "type": "paragraph",
+                "text": "Prioritizing municipal advocacy on transportation issues that directly affect Western students, including increasing bus frequency at peak times so buses do not leave students behind because they are full or late, improving funding for the bus system generally, and prioritizing routes that students commonly take to and from campus."
+              }
+            ]
           }
         ]
       },
@@ -53,114 +162,19 @@
         "id": "life-after-campus",
         "header": "Life After Campus",
         "subSections": [
-          { 
-            "id": "possibilities-fair", 
-            "header": "Possibilities Fair", 
-            "content": "Organizing events to connect students with post-graduation opportunities, including career fairs and alumni networking."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "category": "Community",
-    "sections": [
-      {
-        "id": "engagement",
-        "header": "Engagement",
-        "subSections": [
-          { 
-            "id": "strategic-promotions", 
-            "header": "Strategic Promotions", 
-            "content": "Enhancing visibility for student events and clubs through targeted campaigns."
-          },
-          { 
-            "id": "limiting-surveys", 
-            "header": "Limiting Surveys", 
-            "content": "Reducing the frequency of surveys while ensuring they address key student concerns."
-          },
-          { 
-            "id": "connecting-student-leaders", 
-            "header": "Connecting Student Leaders", 
-            "content": "Facilitating discussions among student leaders to share best practices and collaborative ideas."
-          },
-          { 
-            "id": "western-roar", 
-            "header": "Western Roar", 
-            "content": "Creating forums for student feedback on university and community policies."
-          },
-          { 
-            "id": "club-systems", 
-            "header": "Club Systems", 
-            "content": "Streamlining the USC club system to improve resource allocation and accessibility for all student organizations."
-          }
-        ]
-      },
-      {
-        "id": "sustainability",
-        "header": "Sustainability",
-        "subSections": [
-          { 
-            "id": "food-waste", 
-            "header": "Food Waste", 
-            "content": "Implementing initiatives to reduce food waste on campus through better planning and partnerships."
-          },
-          { 
-            "id": "sustainable-accessible-food", 
-            "header": "Sustainable and Accessible Food Options", 
-            "content": "Promoting sustainable and affordable food choices for students across campus eateries."
-          },
-          { 
-            "id": "fossil-fuel-divestment", 
-            "header": "Fossil Fuel Divestment", 
-            "content": "Advocating for the university’s divestment from fossil fuel investments."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "category": "Culture",
-    "sections": [
-      {
-        "id": "culture-appreciation",
-        "header": "Culture Appreciation",
-        "subSections": [
-          { 
-            "id": "multicultural-events", 
-            "header": "Multicultural Events", 
-            "content": "Hosting events that celebrate the diversity of cultures represented on campus."
-          },
-          { 
-            "id": "indigenous-initiatives", 
-            "header": "Indigenous Initiatives", 
-            "content": "Supporting Indigenous student programs and cultural awareness activities."
-          },
-          { 
-            "id": "supporting-international-students", 
-            "header": "Supporting International Students", 
-            "content": "Enhancing resources for international students to better integrate and succeed."
-          }
-        ]
-      },
-      {
-        "id": "affiliates-small-faculties",
-        "header": "Affiliates and Small Faculties",
-        "subSections": [
-          { 
-            "id": "kings-and-huron", 
-            "header": "Kings and Huron", 
-            "content": "Strengthening partnerships and programs with affiliate colleges."
-          },
-          { 
-            "id": "brescia-transition", 
-            "header": "Brescia Transition", 
-            "content": "Providing support for Brescia College’s transitional programs."
-          },
-          { 
-            "id": "small-faculties", 
-            "header": "Small Faculties", 
-            "content": "Addressing the unique needs of smaller faculties within the university."
+          {
+            "id": "possibilities-fair",
+            "header": "Possibilities Fair",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "It can be very difficult to decide what to do after university, especially with such a rapidly changing world and so many available options."
+              },
+              {
+                "type": "paragraph",
+                "text": "Running a \"Possibilities Fair\": a day where recruiters, alumni, and organizations representing different post-graduate options, ranging from employment to graduate school to gap year travel opportunities, run booths and speak to students in the UCC. Students can explore different options for what to do after graduation, and discover possibilities they never would have heard about otherwise."
+              }
+            ]
           }
         ]
       }

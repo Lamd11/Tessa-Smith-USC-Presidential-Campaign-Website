@@ -4,7 +4,7 @@ import platformData from "./platform_data.json"; // Import JSON
 export interface SubSection {
   id: string;
   header: string;
-  content: string;
+  content: { type: string; text?: string; items?: string[] }[];
 }
 
 export interface Section {
@@ -50,56 +50,75 @@ const Platform = () => {
         id="platform-navbar"
         className={`relative top-14 transition-all duration-300 h-[80vh] ${
           isFixed ? "sticky" : "relative"
-        } w-64 bg-gray-100 shadow-md overflow-hidden`}
+        } w-64 bg-gray-100 shadow-md overflow-y-auto`}
       >
-        <div className="h-full overflow-y-auto p-4">
-          {platformData.map((category: PlatformCategory) => (
-            <div key={category.category} className="mb-6">
-              <h3 className="mb-2 text-lg font-bold">{category.category}</h3>
+        <ul className="p-4">
+          {platformData.map((category) => (
+            <li key={category.category} className="mb-4">
+              <h3 className="mb-2 text-sm font-bold uppercase">{category.category}</h3>
               {category.sections.map((section) => (
-                <div key={section.id} className="mb-4">
-                  <a
-                    href={`#${section.id}`}
-                    className="text-blue-500 mb-1 block hover:underline"
-                  >
-                    {section.header}
-                  </a>
-                  {section.subSections.map((subSection) => (
+                <ul key={section.id} className="ml-4">
+                  <li className="mb-2">
                     <a
-                      key={subSection.id}
-                      href={`#${subSection.id}`}
-                      className="text-gray-500 block pl-4 hover:underline"
+                      href={`#${section.id}`}
+                      className="text-blue-600 hover:underline"
                     >
-                      {subSection.header}
+                      {section.header}
                     </a>
+                  </li>
+                  {section.subSections.map((subSection) => (
+                    <li key={subSection.id} className="ml-4">
+                      <a
+                        href={`#${subSection.id}`}
+                        className="text-gray-700 text-sm hover:underline"
+                      >
+                        {subSection.header}
+                      </a>
+                    </li>
                   ))}
-                </div>
+                </ul>
               ))}
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       {/* Content */}
-      <div className="mt-14 flex-1 p-8">
-        {platformData.map((category: PlatformCategory) =>
-          category.sections.map((section) => (
-            <div key={section.id} id={section.id} className="mb-16">
-              <h2 className="mb-4 text-2xl font-bold">{section.header}</h2>
-              {section.subSections.map((subSection) => (
-                <div key={subSection.id} id={subSection.id} className="mb-8">
-                  <h3 className="mb-2 text-xl font-semibold">
-                    {subSection.header}
-                  </h3>
-                  <p className="text-gray-700">
-                    {/* Add content for each subsection here */}
-                    {subSection.content}
-                  </p>
-                </div>
-              ))}
-            </div>
-          ))
-        )}
+      <div className="flex-1 p-8">
+        {platformData.map((category) => (
+          <div key={category.category}>
+            {category.sections.map((section) => (
+              <div key={section.id} id={section.id} className="mb-8">
+                <h2 className="mb-4 text-2xl font-bold">{section.header}</h2>
+                {section.subSections.map((subSection) => (
+                  <div key={subSection.id} id={subSection.id} className="mb-6">
+                    <h3 className="mb-2 text-xl font-semibold">
+                      {subSection.header}
+                    </h3>
+                    {subSection.content.map((content, index) => {
+                      if (content.type === "paragraph") {
+                        return (
+                          <p key={index} className="mb-4">
+                            {content.text}
+                          </p>
+                        );
+                      } else if (content.type === "list" && content.items) {
+                        return (
+                          <ul key={index} className="mb-4 ml-8 list-disc">
+                            {content.items.map((item, idx) => (
+                              <li key={idx}>{item}</li>
+                            ))}
+                          </ul>
+                        );
+                      }
+                      return null;
+                    })}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );
