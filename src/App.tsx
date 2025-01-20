@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Landing from './components/Landing/Landing';
 import Platform from './components/Platform/Platform';
 import Contact from './components/Contact/Contact';
-import About from './components/About';
+import About from './components/About/About';
 import IntroAnimation from './components/IntroAnimation';
 import Footer from './components/Footer';
 
