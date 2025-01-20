@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
         <div className="left-auto mx-auto my-auto flex h-full w-full flex-col justify-center">
           <div className="mx-auto space-y-4 text-left">
             <h1 className="text-6 justify-center text-5xl font-bold text-black-custom">
-              Have questions?<br />I'd loved to chat!
+              Have questions?<br />I'd love to chat!
             </h1>
             <h3 className="text-m md:text-1xl lg:text-1xl font-semibold sm:text-lg">
               All your inquiries answered <FontAwesomeIcon icon={faHeart} color="red" />
