@@ -5,7 +5,7 @@ const AnimatedText: React.FC = () => {
     const firstName = "TESSA";
     const lastName = "SMITH";
     return (
-        <div className='flex gap-2 text-xl font-extrabold text-dark-pink-custom md:text-4xl'>
+        <div className='flex gap-2 text-xl font-semibold text-dark-pink-custom md:text-4xl'>
             <motion.div
                 className="inline-block"
                 initial="hidden"

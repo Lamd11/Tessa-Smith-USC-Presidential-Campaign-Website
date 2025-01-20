@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from 'framer-motion';
-import Navbar from '../Navbar/Navbar'
+import { motion } from "framer-motion";
+import Navbar from "../Navbar/Navbar";
 
 interface LandingProps {
   title: string;
@@ -8,51 +8,36 @@ interface LandingProps {
   image: string;
 }
 
-
 const Landing: React.FC<LandingProps> = ({ title, description, image }) => {
-
-
   return (
+    <div className="text-white flex min-h-screen w-full flex-col justify-center overflow-hidden bg-off-white sm:flex-row">
+      <Navbar />
 
-    <div className="text-white relative flex h-screen w-full justify-center overflow-hidden bg-off-white text-center">
-      {/* This is the landing image */}
-      <Navbar/>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div
-          className="h-2/3 w-2/3 rounded-md bg-cover bg-center shadow-lg"
-          style={{ backgroundImage: `url('${image}')` }}
-        >
+      {/* Content Wrapper */}
+      <div className="mt-24 flex w-full flex-col sm:mt-0 sm:flex-row">
+        {/* Left box */}
+        <div className="flex flex-col justify-center px-6 py-8 text-center sm:w-3/4 sm:px-10 sm:text-left lg:px-16">
+          <h3 className="text-gray-400 text-lg sm:text-xl">
+            Your Presidential Candidate
+          </h3>
+          <h1 className="mb-8 mt-2 text-6xl font-bold leading-tight sm:text-8xl lg:text-9xl">
+            TESSA SMITH
+          </h1>
+          <blockquote className="text-gray-300 mt-6 border-l-4 border-pink-custom pl-4 text-left text-2xl sm:text-3xl lg:text-4xl">
+            Through my perspective, passion, and experience, I will build a USC that helps all students thrive here at Western.
+
+          </blockquote>
+        </div>
+
+        {/* Right box */}
+        <div className="my-auto flex h-4/6 items-center justify-center px-8 py-12 sm:w-1/2 sm:px-10 lg:px-16">
+          <img
+            src="images/tessa_about.JPG"
+            alt="Tessa Smith Sitting"
+            className="max-w-full rounded-lg shadow-lg sm:w-4/5 md:w-3/4 lg:w-2/3"
+          />
         </div>
       </div>
-
-      {/* Title. Text above the landing image */}
-      <motion.h1
-        className="absolute left-10 top-28 text-4xl font-extrabold text-off-white md:text-6xl"
-        style={{
-          backgroundColor: '#141619', // Black box
-          padding: '10px',
-          borderRadius: '5px',
-        }}
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {title}
-      </motion.h1>
-      {/* Description. Text underneath image */}
-      <motion.h2
-        className="absolute bottom-28 right-10 text-3xl font-bold text-off-white md:text-5xl"
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5}}
-        style={{
-          backgroundColor: '#141619', // Black box
-          padding: '10px',
-          borderRadius: '5px',
-        }}
-      >
-        {description} <br /> 2025-2026
-      </motion.h2>
     </div>
   );
 };
