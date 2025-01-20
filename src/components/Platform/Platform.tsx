@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import platformData from "./platform_data.json"; // Import JSON
+import ReactMarkdown from 'react-markdown';
+
 
 export interface SubSection {
   id: string;
@@ -50,7 +52,7 @@ const Platform = () => {
       <div
         id="platform-navbar"
         className={`${
-          isFixed ? "sticky top-0" : "relative"
+          isFixed ? "sticky top-0 h-full" : "relative"
         } md:sticky md:top-10 w-full md:w-64 bg-gray-100 shadow-md z-50`}
       >
         {/* Mobile Hamburger Menu */}
@@ -139,7 +141,7 @@ const Platform = () => {
                       if (content.type === "paragraph") {
                         return (
                           <p key={index} className="mb-4">
-                            {content.text}
+                            <ReactMarkdown>{content.text}</ReactMarkdown>
                           </p>
                         );
                       } else if (content.type === "list" && content.items) {

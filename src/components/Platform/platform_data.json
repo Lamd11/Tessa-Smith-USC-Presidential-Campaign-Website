@@ -12,7 +12,7 @@
             "content": [
               {
                 "type": "paragraph",
-                "text": "Your experience with academics greatly impacts your enjoyment of student life, so I want to ensure the USC provides as much academic support as possible."
+                "text": "_Your experience with academics greatly impacts your enjoyment of student life, so I want to ensure the USC provides as much academic support as possible._"
               },
               {
                 "type": "list",
@@ -173,6 +173,290 @@
               {
                 "type": "paragraph",
                 "text": "Running a \"Possibilities Fair\": a day where recruiters, alumni, and organizations representing different post-graduate options, ranging from employment to graduate school to gap year travel opportunities, run booths and speak to students in the UCC. Students can explore different options for what to do after graduation, and discover possibilities they never would have heard about otherwise."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Community",
+    "sections": [
+      {
+        "id": "engagement",
+        "header": "Engagement",
+        "subSections": [
+          {
+            "id": "strategic-promotions",
+            "header": "Strategic Promotions",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Students have to worry about many things: academics, social life, and many more. The vast majority of us will not be seeking out USC resources or even know how to find these resources, so it is the job of the USC to meet students where they are at."
+              },
+              {
+                "type": "paragraph",
+                "text": "Promoting the most directly beneficial USC services at appropriate times through faculty councils, sophs, and dons where possible."
+              },
+              {
+                "type": "paragraph",
+                "text": "Streamlining the promotion of services to focus heavily on the most directly beneficial services at the most relevant time. For example, we will focus engagement efforts around academic support as exam seasons approach, and around housing support during rental season."
+              }
+            ]
+          },
+          {
+            "id": "limiting-surveys",
+            "header": "Limiting Surveys: Quality over Quantity",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "The USC puts out a lot of surveys currently. Rather than pushing students to do a million different surveys, I will prioritize only the most important ones."
+              },
+              {
+                "type": "paragraph",
+                "text": "Only publishing and promoting surveys if there is a finalized plan for what the survey aims to achieve and how the data collected will be used. This is beneficial to students as it avoids constant bombardment by surveys and a loss of interest. This will also help the USC’s advocacy and engagement as it will result in more responses on necessary surveys as well as ensuring that engagement efforts are done with intention."
+              }
+            ]
+          },
+          {
+            "id": "connecting-student-leaders",
+            "header": "Connecting Student Leaders",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "The different areas of student leadership and advocacy are very disconnected, leading to a lack of understanding. Improving this by building natural connections will help streamline advocacy, inform governance, and ensure student leaders are more aware of the overall process of student governance."
+              },
+              {
+                "type": "paragraph",
+                "text": "Hosting an event for student leaders (including USC executives, faculty council executives, USC councillors, student senators, and students on the Board of Directors and Board of Governors, among others) at the beginning of the year to encourage communication and collaboration among leadership and advocacy groups."
+              },
+              {
+                "type": "paragraph",
+                "text": "Creating a Slack chat for student leaders to share updates and necessary information, to ensure this is easily accessible to everyone who is likely to benefit from it and prevent issues of information not being shared, especially to small faculties and affiliates."
+              }
+            ]
+          },
+          {
+            "id": "western-roar",
+            "header": "Western Roar",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "In addition to all the supports of the USC, we need a fun way to de-stress and bond over academic struggles."
+              },
+              {
+                "type": "paragraph",
+                "text": "Proposing the Western Roar: gathering together on the football field on the first day of final exam season to scream in unison and let out our frustration. This will be a unique and memorable bonding experience for our school and contribute towards school spirit and solidarity despite the stress of exams."
+              }
+            ]
+          },
+          {
+            "id": "clubs-system",
+            "header": "Clubs System",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "The clubs system is a huge part of what makes campus culture memorable for many students. I want to make it as easy as possible for club leaders to focus on what matters most: serving their communities."
+              },
+              {
+                "type": "paragraph",
+                "text": "Streamlining the event proposal process, financial reporting processes, and other necessary paperwork for club functioning for USC clubs. This makes club executive positions more accessible and less stressful and ensures that clubs can function effectively by focusing more on their culture and community."
+              },
+              {
+                "type": "paragraph",
+                "text": "Allowing unofficial groups to use the room booking system on a case-by-case basis after application and review by the USC. This includes unratified dance clubs which need to use the room booking system to access rooms without tables attached to the floors."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "global-issues",
+        "header": "Engaging with Global Issues",
+        "subSections": [
+          {
+            "id": "global-conflicts",
+            "header": "Global Political Conflicts",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "I am dedicated to creating a space where people can respectfully hold different opinions. The priority of the USC is to ensure that all students feel comfortable on campus, even when they have disagreements on pressing and sometimes very personal issues."
+              },
+              {
+                "type": "paragraph",
+                "text": "Remembering that the USC’s primary obligation is to promote student comfort and security, and therefore standing firmly against hate and violence from any source."
+              },
+              {
+                "type": "paragraph",
+                "text": "Ensuring I continue to listen to student voices from every affected community, and communicating consistently with these student communities to make sure the USC is supporting them adequately."
+              }
+            ]
+          },
+          {
+            "id": "climate-change",
+            "header": "Climate Change and Sustainability",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "With the effects of climate change already impacting some of the world’s most vulnerable groups, Western and the USC must continue their work as leaders in climate and waste mitigation."
+              },
+              {
+                "type": "paragraph",
+                "text": "Continuing to work towards the implementation of the green bin program on campus with student advocacy organizations like Greensort. Once green bins are brought on campus, I will ensure they are clearly labelled and placed strategically outside eateries that generate significant food waste."
+              },
+              {
+                "type": "paragraph",
+                "text": "Advocating to Western residences and hospitality services for more sustainable and accessible food options on campus, including vegan and vegetarian options. This is climate-friendly and also improves accessibility for those with dietary restrictions."
+              },
+              {
+                "type": "paragraph",
+                "text": "Pushing to replace single-use containers in campus food spots with reusable dishes where possible, and where it is not possible to have reusable dishes, advocating to make sure stations for recycling and composting containers are easily available and clearly labelled."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Culture",
+    "sections": [
+      {
+        "id": "cultural-appreciation",
+        "header": "Cultural Appreciation",
+        "subSections": [
+          {
+            "id": "multicultural-events",
+            "header": "Multicultural Events",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Western is a mosaic of diverse cultural, religious, and ethnic groups that deserve to be celebrated. Students from all different backgrounds deserve to find their place at university, which is often done through cultural connection."
+              },
+              {
+                "type": "paragraph",
+                "text": "Hosting events throughout the year to celebrate food from different cultures, allowing students to share their backgrounds through food. This would look like events in the Mustang Lounge featuring different dishes from a specific region, or like events with dishes from many different regions. This would be done in collaboration with cultural clubs and organizations on campus."
+              },
+              {
+                "type": "paragraph",
+                "text": "Hosting a \"Language Cafe\" where students can share and practice languages over refreshments in a casual and non-judgemental environment. This helps people improve their skills in a language they are learning, meet others who speak their own language, and develop cultural understanding with one another."
+              }
+            ]
+          },
+          {
+            "id": "indigenous-initiatives",
+            "header": "Indigenous Initiatives",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Indigenous students on campus have unique perspectives and needs. I will not only ensure that you have their concerns heard but also will promote opportunities to celebrate their culture."
+              },
+              {
+                "type": "paragraph",
+                "text": "Maintaining active communication with Indigenous groups and organizations on campus, including the Wampum Learning Lodge and the Indigenous Students’ Association to ensure the needs of Indigenous students are taken into account by the USC."
+              },
+              {
+                "type": "paragraph",
+                "text": "Featuring Indigenous artists, creators, and small business owners within both the Mustang Makers and Mustang Marketplace programs. This is an important way for Indigenous culture to be highlighted and celebrated on campus."
+              }
+            ]
+          },
+          {
+            "id": "supporting-international-students",
+            "header": "Supporting International Students",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "International students often find it difficult to access necessary resources for academic and personal life in Canada, especially if the procedures for accessing these resources are different from their home countries. I will make it far easier for you to make Western your home away from home."
+              },
+              {
+                "type": "paragraph",
+                "text": "Advocating to Western to translate their international student resources, such as those on the International and Exchange Student Centre website, into different commonly spoken languages."
+              },
+              {
+                "type": "paragraph",
+                "text": "Restarting the International Student Support Committee of the USC, which has also not been active since the 2021-22 school year, to engage with international students and voice their concerns and needs directly to the USC."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "affiliates-small-faculties",
+        "header": "Affiliates and Small Faculties",
+        "subSections": [
+          {
+            "id": "kings-huron",
+            "header": "Kings and Huron",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Kings and Huron are often treated as completely separate from the USC and Western campus culture. Each has its own community, but the USC’s job is to represent and serve all students."
+              },
+              {
+                "type": "paragraph",
+                "text": "Being personally present at the affiliate colleges to talk to the community, hear concerns, and help students find support and community through the USC."
+              },
+              {
+                "type": "paragraph",
+                "text": "Creating a Faculty and Affiliate Relations Coordinator intern position under the Vice-President Student Engagement dedicated to strengthening relationships with and providing resources to affiliate and faculty councils. This will encourage more conversation and provide these councils with a clear line of communication to the USC."
+              },
+              {
+                "type": "paragraph",
+                "text": "Hosting USC events in collaboration with the HUCSC and KUCSC to ensure the USC is welcoming and accessible to every student on campus. Huron and King’s students don’t tend to hear about USC events as they are very centralized on main campus and in the UCC, and this would help bridge that gap."
+              },
+              {
+                "type": "paragraph",
+                "text": "Ensuring students at affiliates get emails and information just as much as main campus students. Things like campus snow days are not always communicated quickly and effectively to students at the affiliate colleges. I will push Western to change this."
+              }
+            ]
+          },
+          {
+            "id": "brescia-transition",
+            "header": "Brescia Transition",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Students from Brescia are adapting to significant changes since the integration. The unique culture and community ought to be preserved while providing students with the resources available at Western and the USC."
+              },
+              {
+                "type": "paragraph",
+                "text": "Reaching out to Brescia clubs and assist them with the ratification process if they are interested, as well as allow them to use free room bookings in the meantime. Many Brescia clubs are still not ratified under the USC and therefore do not have the same access to resources they used to."
+              },
+              {
+                "type": "paragraph",
+                "text": "Ensuring that the unique needs of Brescia clubs are taken into account within the clubs system, such as by facilitating a club fair at Brescia to avoid them being crowded out by other clubs."
+              },
+              {
+                "type": "paragraph",
+                "text": "Continuing to advocate for Western to reopen the Beryl Ivey library so students living at Clare Hall can access this study space near their home and prevent potential safety issues from travelling after late-night study sessions."
+              }
+            ]
+          },
+          {
+            "id": "small-faculties",
+            "header": "Small Faculties",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Students from smaller faculties do not always have the same access to USC resources and communication as those from larger faculties. We have a responsibility to ensure these resources reach them."
+              },
+              {
+                "type": "paragraph",
+                "text": "Making sure I am personally in contact with and engaged with faculty councils, especially small faculties. This involves being present in campus spaces other than the UCC to speak to students, and attending events by faculty councils."
+              },
+              {
+                "type": "paragraph",
+                "text": "Creating a Faculty and Affiliate Relations Coordinator (as mentioned above) to strengthen relationships with faculty councils. This will specifically benefit small faculties by giving council executives one person to contact about the USC, its processes, and available resources. This coordinator will also actively ensure that student interests represented by faculty councils are heard by the USC."
+              },
+              {
+                "type": "paragraph",
+                "text": "Having the USC act more formally in a support and advisory role for faculty councils, especially by being present to advise faculty councils on providing certain events and services. This includes paying attention to which services are best offered by USC vs faculty and affiliate councils. I want to ensure that the USC is not running duplicate events of those run by other councils and that where it is more beneficial for events to be run by faculties, the USC does not step in to run them."
+              },
+              {
+                "type": "paragraph",
+                "text": "Collaborating with faculty council events, especially if the council is proposing a large-scale event that could be better carried out with the assistance of the USC and its resources."
               }
             ]
           }

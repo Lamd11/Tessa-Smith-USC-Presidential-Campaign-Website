@@ -2,7 +2,6 @@ import React from 'react';
 import Mail from './Mail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons'; // Import necessary icons
-import { motion } from 'framer-motion'; // Import Framer Motion
 
 const Contact: React.FC = () => {
   return (
