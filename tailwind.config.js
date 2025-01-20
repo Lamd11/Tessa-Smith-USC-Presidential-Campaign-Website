@@ -5,12 +5,14 @@ module.exports = {
   ],
   theme: {
     colors: {
+
+      'light-pink-custom': '#FFC0D2', // Light pink for backgrounds or buttons
+      'dark-pink-custom': '#FF4694',    // Bold dark pink for text or icons'
+      'pink-custom': '#FD75AE',
+
       'black-custom': '#1E1E24',         // Deep charcoal for contrast
       'grey-custom': '#3D3B4E',         // Muted grey for accents
-      'pink-custom': '#FF69B4',         // Vibrant pink for highlights
-      'light-pink-custom': '#FFC0CB',   // Light pink for backgrounds or buttons
-      'peach-custom': '#FFD1DC',        // Peachy pink for subtle highlights
-      'dark-pink-custom': '#D81B60',    // Bold dark pink for text or icons
+      'peach-custom': '#FFD1DC',        // Peachy pink for subtle highlight
       'off-white': '#F9F3F3',           // Soft off-white for clean spaces
       'white-custom': '#FFFFFF',        // Standard white
       'lavender-custom': '#E6E6FA',     // Lavender for soft complementary tones
@@ -21,7 +23,12 @@ module.exports = {
       'green-custom': '#10B981',        // Green for Linktree
       'light-green-custom': '#6EE7B7',  // Light green for hover effects
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        header: ['"Bebas Neue"', 'sans-serif'], // Font for h1 headers
+        body: ['"Poppins"', 'sans-serif'],     // Font for smaller text
+      },
+    },
   },
   plugins: [],
 }

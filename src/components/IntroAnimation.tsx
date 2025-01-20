@@ -5,7 +5,7 @@ const IntroAnimation: React.FC = () => {
     return (
         <div className="absolute left-0 top-0 h-full w-full overflow-hidden">
             <motion.div
-                className="absolute left-0 top-0 z-20 h-full w-full overflow-hidden bg-light-pink-custom"
+                className="absolute left-0 top-0 z-20 h-full w-full overflow-hidden bg-pink-custom"
                 initial={{ y: 0 }}
                 animate={{ y: '-100%' }}
                 transition={{ duration: 0.5, delay: 1.5 }}
@@ -77,7 +77,7 @@ const IntroAnimation: React.FC = () => {
                         }}
                     >
                         <h1 className="text-5xl font-extrabold text-black-custom md:text-9xl">
-                            Vote <span className='text-red-custom'>TESSA</span>
+                            Vote <span className='text-dark-pink-custom'>TESSA</span>
                         </h1>
                     </motion.div>
                 </div>

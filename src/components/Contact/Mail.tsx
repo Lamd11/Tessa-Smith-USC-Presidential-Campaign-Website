@@ -8,7 +8,7 @@ const Mail: React.FC = () => {
     const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText("TessaSmith@gmail.com")
+        navigator.clipboard.writeText("tessasmith4usc@gmail.com")
         setCopied(true);
 
         setTimeout(() => {
@@ -19,7 +19,7 @@ const Mail: React.FC = () => {
     return (
         <div className="relative">
             <button
-                className='flex cursor-pointer rounded-full bg-off-white p-4 shadow-xl transition-all duration-300 hover:bg-light-blue-custom'
+                className='flex cursor-pointer rounded-full bg-off-white p-4 shadow-xl transition-all duration-300 hover:bg-white-custom'
                 onClick={handleCopy}
                 aria-label="Copied email to clipboard!"
             >
@@ -31,8 +31,8 @@ const Mail: React.FC = () => {
                     <h2 className='text-m md:text-1xl lg:text-1xl text-left font-semibold sm:text-lg'>
                         Click to copy email!
                     </h2>
-                    <h2 className='text-m md:text-1xl lg:text-1xl text-left font-bold text-red-custom sm:text-lg'>
-                        TessaSmith@gmail.com
+                    <h2 className='text-m md:text-1xl lg:text-1xl text-left font-bold text-blue-custom sm:text-lg'>
+                        tessasmith4usc@gmail.com
                     </h2>
                 </div>
             </button>

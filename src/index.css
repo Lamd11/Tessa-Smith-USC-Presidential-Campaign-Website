@@ -2,17 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    margin: 0;
-    width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
+@import '@fontsource/bebas-neue';
+@import '@fontsource/poppins';
+
+h1, h2 {
+  @apply font-header;
+}
+
+body, p, span, li, a, button, h3, h4, h5, h6 {
+  @apply font-body;
+}

@@ -90,11 +90,11 @@ const Menu: React.FC<MenuProps> = ({ isOpen, setOpen, sections }) => {
                 ))}
             </div>
             {/* Box 2. Email directory*/}
-            <div className="relative mt-4 flex items-start rounded-3xl bg-dark-pink-custom p-4 shadow-lg transition-colors duration-500 hover:bg-red-custom hover:ease-in-out">
+            <div className="relative mt-4 flex items-start rounded-3xl bg-dark-pink-custom p-4 shadow-lg transition-colors duration-500 hover:bg-black-custom hover:ease-in-out">
                 <motion.div
                     className='relative flex h-full w-full cursor-pointer justify-between py-4'
                     whileHover="hover"
-                    onClick={() => window.open("mailto:xyz@yourapplicationdomain.com")}
+                    onClick={() => window.open("mailto:tessasmith4usc@gmail.com")}
                 >
                     <motion.div
                         className="absolute ml-8 text-3xl text-white-custom"
