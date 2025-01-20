@@ -1,41 +1,69 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { faMailBulk, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
 const Mail: React.FC = () => {
-
     const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText("tessasmith4usc@gmail.com")
+        navigator.clipboard.writeText("tessasmith4usc@gmail.com");
         setCopied(true);
-
         setTimeout(() => {
-            setCopied(false)
+            setCopied(false);
         }, 2500);
-    }
+    };
 
     return (
-        <div className="relative">
-            <button
-                className='flex cursor-pointer rounded-full bg-off-white p-4 shadow-xl transition-all duration-300 hover:bg-white-custom'
-                onClick={() => window.open("mailto:tessasmith4usc@gmail.com")}
-                aria-label="Copied email to clipboard!"
+        <div className="relative mt-4 p-4">
+            <motion.div
+                className="relative flex cursor-pointer items-center justify-between gap-8 rounded-3xl bg-dark-pink-custom p-4 shadow-lg transition-colors duration-500 hover:bg-black-custom hover:ease-in-out"
+                onClick={() => {
+                    window.open("mailto:tessasmith4usc@gmail.com");
+                    handleCopy();
+                }}
+                whileHover="hover"
             >
-                <FontAwesomeIcon
-                    icon={faMailBulk}
-                    className="rounded-3xl bg-lavender-custom p-4"
-                />
-                <div className="ml-4 flex flex-col">
-                    <p className='text-m md:text-1xl lg:text-1xl text-left font-semibold sm:text-lg'>
-                        Click now to mail.
-                    </p>
-                    <p className='text-m md:text-1xl lg:text-1xl text-left font-bold text-blue-custom sm:text-lg'>
-                        tessasmith4usc@gmail.com
-                    </p>
+                <div>
+                <motion.div
+                    className="absolute left-8 text-3xl text-white-custom"
+                    initial={{ opacity: 0, x: "-100%" }}
+                    variants={{
+                        hover: {
+                            opacity: 1,
+                            x: "-20%",
+                        },
+                    }}
+                    transition={{
+                        duration: 0.3,
+                        ease: "easeInOut",
+                    }}
+                >
+                    <FontAwesomeIcon icon={faArrowRight} size="xs" />
+                </motion.div>
+                <motion.div
+                    className="ml-8 text-3xl text-white-custom"
+                    initial={{ x: "0%" }}
+                    variants={{
+                        hover: {
+                            x: "20%",
+                        },
+                    }}
+                    transition={{
+                        duration: 0.3,
+                        ease: "easeInOut",
+                    }}
+                >
+                    Let’s Talk
+                </motion.div>
                 </div>
-            </button>
+                <FontAwesomeIcon
+                    className="ml-auto mr-4 text-white-custom"
+                    icon={faMailBulk}
+                    size="xl"
+                />
+            </motion.div>
+
             {copied && (
                 <motion.div
                     className="absolute -bottom-16 left-1/2 -translate-x-1/2 rounded-lg bg-light-pink-custom px-4 py-2 text-sm font-medium text-black-custom shadow-md"
@@ -48,6 +76,6 @@ const Mail: React.FC = () => {
             )}
         </div>
     );
-}
+};
 
-export default Mail
+export default Mail;

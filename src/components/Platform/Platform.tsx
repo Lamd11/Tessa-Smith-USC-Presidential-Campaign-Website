@@ -25,25 +25,25 @@ const Platform = () => {
   const pillars = [
     {
       title: "Supports",
-      brief: "Explore resources and initiatives to improve your academic, personal, and financial well-being.",
-      bgColor: "bg-green-custom",
-      textColor: "text-green-custom",
+      brief: "Enhancing student well-being by improving access to resources, helping students thrive on campus, off campus, and after graduation",
+      bgColor: "bg-dark-pink-custom",
+      textColor: "text-dark-pink-custom",
       icon: faBook,
       category: "Supports", // Corresponds to category in JSON
     },
     {
       title: "Community",
-      brief: "Discover how the USC builds community through engagement, leadership, and collaboration.",
-      bgColor: "bg-blue-custom",
-      textColor: "text-blue-custom",
+      brief: "Keeping in mind that the USC exists to serve students and improve campus unity, fostering stronger student connections through strategic engagement and school spirit initiatives",
+      bgColor: "bg-pink-custom",
+      textColor: "text-pink-custom",
       icon: faUsers,
       category: "Community", // Corresponds to category in JSON
     },
     {
       title: "Culture",
-      brief: "Celebrate diversity, promote inclusion, and uplift unique voices at Western.",
-      bgColor: "bg-pink-custom",
-      textColor: "text-pink-custom",
+      brief: "Celebrate diversity by supporting multicultural events, Indigenous initiatives, and international student needs while ensuring inclusivity for affiliates and smaller faculties",
+      bgColor: "bg-light-pink-custom",
+      textColor: "text-light-pink-custom",
       icon: faGlobe,
       category: "Culture", // Corresponds to category in JSON
     },

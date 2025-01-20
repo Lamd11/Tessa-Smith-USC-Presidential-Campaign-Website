@@ -12,8 +12,8 @@ const Contact: React.FC = () => {
         {/* Email Section */}
         <div className="left-auto mx-auto my-auto flex h-full w-full flex-col justify-center">
           <div className="mx-auto space-y-4 text-left">
-            <h1 className="justify-center text-3xl font-bold text-black-custom lg:text-5xl">
-              Have questions?<br />Let's discuss and make <br />things clear.
+            <h1 className="text-6 justify-center text-5xl font-bold text-black-custom">
+              Have questions?<br />I'd loved to chat!
             </h1>
             <h3 className="text-m md:text-1xl lg:text-1xl font-semibold sm:text-lg">
               All your inquiries answered <FontAwesomeIcon icon={faHeart} color="red" />
