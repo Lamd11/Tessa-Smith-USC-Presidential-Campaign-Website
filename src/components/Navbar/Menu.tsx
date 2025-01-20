@@ -50,7 +50,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, setOpen, sections }) => {
                     >
                         {/* Links */}
                         <span className='text-gray-800 relative z-10 ml-8 text-3xl font-medium'>
-                            {section}
+                            {section.charAt(0).toUpperCase() + section.slice(1)}
                         </span>
                         {/* Background Colour */}
                         <motion.div
@@ -89,54 +89,6 @@ const Menu: React.FC<MenuProps> = ({ isOpen, setOpen, sections }) => {
                     </motion.div>
                 ))}
             </div>
-            {/* Box 2. Email directory*/}
-            <div className="relative mt-4 flex items-start rounded-3xl bg-dark-pink-custom p-4 shadow-lg transition-colors duration-500 hover:bg-black-custom hover:ease-in-out">
-                <motion.div
-                    className='relative flex h-full w-full cursor-pointer justify-between py-4'
-                    whileHover="hover"
-                    onClick={() => window.open("mailto:tessasmith4usc@gmail.com")}
-                >
-                    <motion.div
-                        className="absolute ml-8 text-3xl text-white-custom"
-                        initial={{ opacity: 0, x: "-100%" }}
-                        variants={{
-                            hover: {
-                                opacity: 1,
-                                x: "-20%",
-                            }
-                        }}
-                        transition={{
-                            duration: 0.3,
-                            ease: "easeInOut",
-                        }}>
-                        <FontAwesomeIcon
-                            icon={faArrowRight}
-                            size="xs"
-                        />
-                    </motion.div>
-                    <motion.div
-                        className="relative ml-8 text-3xl text-white-custom"
-                        initial={{ x: "0%" }}
-                        variants={{
-                            hover: {
-                                x: "20%"
-                            }
-                        }}
-                        transition={{
-                            duration: 0.3,
-                            ease: "easeInOut",
-                        }}>
-                        Let's Talk
-                    </motion.div>
-                    <FontAwesomeIcon 
-                        className='my-auto mr-8'
-                        icon={faEnvelope}
-                        size="xl"
-                        color="white"
-                    />
-                </motion.div>
-            </div>
-
         </motion.div>
     );
 }

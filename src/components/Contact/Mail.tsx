@@ -20,7 +20,7 @@ const Mail: React.FC = () => {
         <div className="relative">
             <button
                 className='flex cursor-pointer rounded-full bg-off-white p-4 shadow-xl transition-all duration-300 hover:bg-white-custom'
-                onClick={handleCopy}
+                onClick={() => window.open("mailto:tessasmith4usc@gmail.com")}
                 aria-label="Copied email to clipboard!"
             >
                 <FontAwesomeIcon
@@ -28,12 +28,12 @@ const Mail: React.FC = () => {
                     className="rounded-3xl bg-lavender-custom p-4"
                 />
                 <div className="ml-4 flex flex-col">
-                    <h2 className='text-m md:text-1xl lg:text-1xl text-left font-semibold sm:text-lg'>
-                        Click to copy email!
-                    </h2>
-                    <h2 className='text-m md:text-1xl lg:text-1xl text-left font-bold text-blue-custom sm:text-lg'>
+                    <p className='text-m md:text-1xl lg:text-1xl text-left font-semibold sm:text-lg'>
+                        Click now to mail.
+                    </p>
+                    <p className='text-m md:text-1xl lg:text-1xl text-left font-bold text-blue-custom sm:text-lg'>
                         tessasmith4usc@gmail.com
-                    </h2>
+                    </p>
                 </div>
             </button>
             {copied && (

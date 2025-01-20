@@ -21,20 +21,20 @@ function App() {
       {/* Had to add id's so I can scroll to them without affecting the component id props. Used div for simplicity lol. */}
       {showComponents && 
         <>
-          <div id="landing" className="min-h-screen">
+          <div id="home" className="min-h-screen">
             <Landing
               title="TESSA SMITH"
               description="USC President"
               image="/images/tessa_smith_landing.jpg"
             />
           </div>
-          <div id="platform" className="min-h-screen">
-            <Platform />
-          </div>
           <div id="about">
             <About />
           </div>
-          <div id="contact" className="min-h-screen">
+          <div id="platform">
+            <Platform />
+          </div>
+          <div id="contact" className="h-1/2">
             <Contact />
           </div>
           <Footer />

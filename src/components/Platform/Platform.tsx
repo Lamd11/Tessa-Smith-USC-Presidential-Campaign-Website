@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-import platformData from "./platform_data.json"; // Import JSON
-import ReactMarkdown from 'react-markdown';
-
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import ReactMarkdown from "react-markdown";
+import platformData from "./platform_data.json"; // Import JSON data
 
 export interface SubSection {
   id: string;
@@ -21,146 +22,104 @@ export interface PlatformCategory {
 }
 
 const Platform = () => {
-  const [isFixed, setIsFixed] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pillars = [
+    {
+      title: "Supports",
+      brief: "Explore resources and initiatives to improve your academic, personal, and financial well-being.",
+      bgColor: "bg-green-custom",
+      textColor: "text-green-custom",
+      icon: faBook,
+      category: "Supports", // Corresponds to category in JSON
+    },
+    {
+      title: "Community",
+      brief: "Discover how the USC builds community through engagement, leadership, and collaboration.",
+      bgColor: "bg-blue-custom",
+      textColor: "text-blue-custom",
+      icon: faUsers,
+      category: "Community", // Corresponds to category in JSON
+    },
+    {
+      title: "Culture",
+      brief: "Celebrate diversity, promote inclusion, and uplift unique voices at Western.",
+      bgColor: "bg-pink-custom",
+      textColor: "text-pink-custom",
+      icon: faGlobe,
+      category: "Culture", // Corresponds to category in JSON
+    },
+  ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const section = document.getElementById("platform");
-      const navbar = document.getElementById("platform-navbar");
+  const [selectedCategory, setSelectedCategory] = useState<PlatformCategory | null>(null);
 
-      if (section && navbar) {
-        const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
-        const currentScroll = window.scrollY;
-
-        if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
-          setIsFixed(true);
-        } else {
-          setIsFixed(false);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const handleCardClick = (categoryName: string) => {
+    const foundCategory = platformData.find((cat) => cat.category === categoryName);
+    setSelectedCategory(selectedCategory?.category === categoryName ? null : foundCategory || null);
+  };
 
   return (
-    <div id="platform" className="relative flex min-h-screen flex-col md:flex-row">
-      {/* Navbar */}
-      <div
-        id="platform-navbar"
-        className={`${
-          isFixed ? "sticky top-0 h-full" : "relative"
-        } md:sticky md:top-10 w-full md:w-64 bg-gray-100 shadow-md z-50`}
-      >
-        {/* Mobile Hamburger Menu */}
-        <div className="text-white z-10 flex items-center justify-between bg-off-white p-4 md:hidden">
-          <h1 className="text-lg font-bold">Platform</h1>
-          <button
-            className="text-white focus:outline-none"
-            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+    <div className="flex h-full flex-col bg-white-custom">
+      <div className="flex w-full flex-col items-center">
+        {/* Header */}
+      <h1 className="mx-auto mt-8 text-3xl font-bold text-black-custom sm:mt-20 sm:text-4xl md:text-5xl lg:text-7xl">
+        Platform
+      </h1>
+
+      {/* Pillars */}
+      <div className="mt-8 flex flex-wrap justify-center gap-6 p-6 sm:mt-20">
+        {pillars.map((pillar, index) => (
+          <div
+            key={index}
+            className="group relative flex cursor-pointer flex-col justify-between rounded-lg bg-white-custom shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg sm:w-[300px] md:w-[350px]"
+            onClick={() => handleCardClick(pillar.category)}
           >
-            <svg
-              className="h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isMobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Dropdown Menu */}
-        <div
-          className={`${
-            isMobileMenuOpen ? "block" : "hidden"
-          } md:block h-[80vh] overflow-hidden`}
-        >
-          <div className="h-full overflow-y-auto bg-off-white p-4">
-            {platformData.map((category: PlatformCategory) => (
-              <div key={category.category} className="mb-6">
-                <h3 className="mb-2 text-lg font-bold">{category.category}</h3>
-                {category.sections.map((section) => (
-                  <div key={section.id} className="mb-4">
-                    <a
-                      href={`#${section.id}`}
-                      className="text-blue-500 mb-1 block hover:underline"
-                      onClick={() => setIsMobileMenuOpen(false)} // Close menu after click on mobile
-                    >
-                      {section.header}
-                    </a>
-                    {section.subSections.map((subSection) => (
-                      <a
-                        key={subSection.id}
-                        href={`#${subSection.id}`}
-                        className="text-gray-500 block pl-4 hover:underline"
-                        onClick={() => setIsMobileMenuOpen(false)} // Close menu after click on mobile
-                      >
-                        {subSection.header}
-                      </a>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="flex-1 p-8">
-        {platformData.map((category) => (
-          <div key={category.category}>
-            {category.sections.map((section) => (
-              <div key={section.id} id={section.id} className="mb-8">
-                <h2 className="mb-4 text-2xl font-bold">{section.header}</h2>
-                {section.subSections.map((subSection) => (
-                  <div key={subSection.id} id={subSection.id} className="mb-6">
-                    <h3 className="mb-2 text-xl font-semibold">
-                      {subSection.header}
-                    </h3>
-                    {subSection.content.map((content, index) => {
-                      if (content.type === "paragraph") {
-                        return (
-                          <p key={index} className="mb-4">
-                            <ReactMarkdown>{content.text}</ReactMarkdown>
-                          </p>
-                        );
-                      } else if (content.type === "list" && content.items) {
-                        return (
-                          <ul key={index} className="mb-4 ml-8 list-disc">
-                            {content.items.map((item, idx) => (
-                              <li key={idx}>{item}</li>
-                            ))}
-                          </ul>
-                        );
-                      }
-                      return null;
-                    })}
-                  </div>
-                ))}
-              </div>
-            ))}
+            <div className={`h-8 w-full rounded-t-lg ${pillar.bgColor} sm:h-12`}></div>
+            <div className="relative mb-auto flex flex-col p-6">
+              <FontAwesomeIcon
+                icon={pillar.icon}
+                className={`absolute -top-4 text-2xl p-2 bg-white-custom ${pillar.textColor} rounded-lg`}
+              />
+              <h2 className="group-hover:text-red-500 mb-4 text-2xl font-bold text-black-custom">
+                {pillar.title}
+              </h2>
+              <p className="text-gray-700">{pillar.brief}</p>
+            </div>
           </div>
         ))}
+      </div>
+          {/* Selected Category Content */}
+      {selectedCategory && (
+        <div className="mt-8 w-full px-4 sm:w-10/12">
+          <h2 className="mb-4 text-3xl font-bold">{selectedCategory.category}</h2>
+          {selectedCategory.sections.map((section) => (
+            <div key={section.id} id={section.id} className="mb-8">
+              <h3 className="mb-2 text-2xl font-semibold">{section.header}</h3>
+              {section.subSections.map((subSection) => (
+                <div key={subSection.id} id={subSection.id} className="mb-6">
+                  <h4 className="mb-2 text-xl font-semibold">{subSection.header}</h4>
+                  {subSection.content.map((content, index) => {
+                    if (content.type === "paragraph") {
+                      return (
+                        <p key={index} className="mb-4">
+                          <ReactMarkdown>{content.text}</ReactMarkdown>
+                        </p>
+                      );
+                    } else if (content.type === "list" && content.items) {
+                      return (
+                        <ul key={index} className="mb-4 ml-8 list-disc">
+                          {content.items.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      );
+                    }
+                    return null;
+                  })}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
       </div>
     </div>
   );

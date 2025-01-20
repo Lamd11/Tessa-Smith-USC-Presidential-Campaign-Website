@@ -29,7 +29,7 @@ const IntroAnimation: React.FC = () => {
                     originY: 0,
                 }}
                 animate={{
-                    bottom: ['5%', '5%', '30%', '30%', '55%'], // Move upward (70% of the parent container's height)
+                    bottom: ['5%', '5%', '20%', '20%', '40%'], // Move upward (70% of the parent container's height)
                     scale: [1.5, 1.5, 1, 1, 1],      // Shrink to normal size
                 }}
                 transition={{

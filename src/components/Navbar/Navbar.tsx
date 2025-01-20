@@ -22,7 +22,14 @@ const Navbar = () => {
             )}
             <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-[90%] flex-col">
                 <div className="mx-auto flex flex-wrap items-center justify-between p-4">
-                    <AnimatedText />
+                    <div className="flex flex-row items-center gap-2 sm:gap-4">
+                        <img
+                            src="/images/logo.png" // Reference directly from public
+                            alt="Tessa Smith"
+                            className="h-12 w-12 rounded-full object-cover shadow-md sm:h-20 sm:w-20"
+                        />
+                        <AnimatedText />
+                    </div>
                     <div className="space-x-4">
                         {/* pink-custom for menu button */}
                         <Button
@@ -74,7 +81,7 @@ const Navbar = () => {
                         <Menu
                             isOpen={isOpen}
                             setOpen={setOpen}
-                            sections={['Home', 'About', 'Platform', 'Contact']}
+                            sections={['home', 'about', 'platform', 'contact']}
                         />
                     )}
                 </AnimatePresence>
