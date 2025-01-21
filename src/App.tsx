@@ -3,6 +3,7 @@ import Landing from './components/Landing/Landing';
 import Platform from './components/Platform/Platform';
 import Contact from './components/Contact/Contact';
 import About from './components/About/About';
+import Experience from './components/Experience/Experience';
 import IntroAnimation from './components/IntroAnimation';
 import Footer from './components/Footer';
 
@@ -30,6 +31,7 @@ function App() {
           </div>
           <div id="about">
             <About />
+            <Experience />
           </div>
           <div id="platform">
             <Platform />

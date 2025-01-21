@@ -60,7 +60,7 @@ const Platform = () => {
     <div className="flex h-full flex-col bg-white-custom">
       <div className="flex w-full flex-col items-center">
         {/* Header */}
-      <h1 className="mx-auto mt-8 text-3xl font-bold text-black-custom sm:mt-20 sm:text-4xl md:text-5xl lg:text-7xl">
+      <h1 className="mx-auto mt-8 text-6xl font-bold text-black-custom sm:mt-20 lg:text-7xl">
         Platform
       </h1>
 

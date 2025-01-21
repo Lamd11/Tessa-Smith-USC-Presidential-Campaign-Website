@@ -10,7 +10,7 @@ interface LandingProps {
 
 const Landing: React.FC<LandingProps> = ({ title, description, image }) => {
   return (
-    <div className="text-white flex min-h-screen w-full flex-col justify-center overflow-hidden bg-off-white sm:flex-row">
+    <div className="text-white flex min-h-screen w-full flex-col justify-center overflow-hidden bg-white-custom sm:flex-row">
       <Navbar />
 
       {/* Content Wrapper */}

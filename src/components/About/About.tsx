@@ -31,7 +31,7 @@ const About: React.FC = () => {
                 viewport={{ once: true }}
                 className="max-w-5xl text-center"
             >
-                <h2 className="font-bodytext-gray-800 text-3xl md:text-4xl md:text-5xl lg:text-7xl">
+                <h2 className="font-bodytext-gray-800 text-6xl lg:text-7xl">
                     About
                 </h2>
 
@@ -86,7 +86,7 @@ const About: React.FC = () => {
                 {/* Read More Button */}
                 <button
                     onClick={toggleShowMore}
-                    className="bg-pink-600 text-white hover:bg-pink-700 mt-8 rounded-full px-6 py-2 shadow-md transition-all"
+                    className="text-white hover:bg-pink-700 mt-8 rounded-full bg-light-pink-custom px-6 py-2 shadow-md transition-all"
                 >
                     {showMore ? 'Read Less' : 'Read More'}
                 </button>
