@@ -20,7 +20,7 @@ function App() {
     <div className="App h-screen">
       <IntroAnimation />
       {/* Had to add id's so I can scroll to them without affecting the component id props. Used div for simplicity lol. */}
-      {showComponents && 
+      {showComponents &&
         <>
           <div id="home" className="min-h-screen">
             <Landing
@@ -39,7 +39,9 @@ function App() {
           <div id="contact" className="h-1/2">
             <Contact />
           </div>
-          <Footer />
+          <div>
+            <Footer />
+          </div>
         </>
       }
     </div>
