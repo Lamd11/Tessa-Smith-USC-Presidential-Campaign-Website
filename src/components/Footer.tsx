@@ -5,7 +5,7 @@ import { faLink } from '@fortawesome/free-solid-svg-icons'; // Import necessary 
 
 const Footer: React.FC = () => {
     return (
-        <div className="w-full bg-black-custom py-8 text-white-custom">
+        <div className="mt-10 w-full bg-black-custom py-8 text-white-custom">
 
             {/* Social Media Icons */}
             <div className="mb-6 flex items-center justify-center space-x-6">
