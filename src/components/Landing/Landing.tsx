@@ -14,7 +14,7 @@ const Landing: React.FC<LandingProps> = ({ title, description, image }) => {
       <Navbar />
 
       {/* Content Wrapper */}
-      <div className="mt-24 flex w-full flex-col sm:mt-0 sm:flex-row">
+      <div className="mt-24 flex w-full flex-col sm:mt-20 sm:flex-row">
         {/* Left box */}
         <div className="flex flex-col justify-center px-6 py-8 text-center sm:w-3/4 sm:px-10 sm:text-left lg:px-16">
           <h3 className="text-gray-400 text-lg sm:text-xl">

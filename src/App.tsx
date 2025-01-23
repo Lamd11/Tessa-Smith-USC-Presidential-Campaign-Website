@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Landing from './components/Landing/Landing';
 import Platform from './components/Platform/Platform';
 import Contact from './components/Contact/Contact';
@@ -6,6 +7,7 @@ import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import IntroAnimation from './components/IntroAnimation';
 import Footer from './components/Footer';
+import NotFound from './components/NotFound';
 
 function App() {
   const [showComponents, setShowComponents] = useState(false);
@@ -17,34 +19,45 @@ function App() {
   }, []);
 
   return (
-    <div className="App h-screen">
-      <IntroAnimation />
-      {/* Had to add id's so I can scroll to them without affecting the component id props. Used div for simplicity lol. */}
-      {showComponents &&
-        <>
-          <div id="home" className="min-h-screen">
-            <Landing
-              title="TESSA SMITH"
-              description="USC President"
-              image="/images/tessa_smith_landing.jpg"
+    <Router>
+      <div className="App h-screen">
+        <IntroAnimation />
+        {/* Had to add id's so I can scroll to them without affecting the component id props. Used div for simplicity lol. */}
+        {showComponents &&
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <div id="home" className="min-h-screen">
+                    <Landing
+                      title="TESSA SMITH"
+                      description="USC President"
+                      image="/images/tessa_smith_landing.jpg"
+                    />
+                  </div>
+                  <div id="about">
+                    <About />
+                    <Experience />
+                  </div>
+                  <div id="platform">
+                    <Platform />
+                  </div>
+                  <div id="contact" className="h-1/2">
+                    <Contact />
+                  </div>
+                  <div className="h-1/6">
+                    <Footer />
+                  </div>
+                </>
+              }
             />
-          </div>
-          <div id="about">
-            <About />
-            <Experience />
-          </div>
-          <div id="platform">
-            <Platform />
-          </div>
-          <div id="contact" className="h-1/2">
-            <Contact />
-          </div>
-          <div>
-            <Footer />
-          </div>
-        </>
-      }
-    </div>
+            <Route path="*" element={<NotFound/>}/>
+
+          </Routes>
+        }
+      </div>
+    </Router>
   );
 }
 
