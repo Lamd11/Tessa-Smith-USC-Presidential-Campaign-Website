@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Analytics } from "@vercel/analytics/react"
 import Landing from './components/Landing/Landing';
 import Platform from './components/Platform/Platform';
 import Contact from './components/Contact/Contact';
@@ -8,6 +9,7 @@ import Experience from './components/Experience/Experience';
 import IntroAnimation from './components/IntroAnimation';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
+
 
 function App() {
   const [showComponents, setShowComponents] = useState(false);
