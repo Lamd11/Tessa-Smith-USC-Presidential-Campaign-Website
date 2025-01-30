@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 import ReactGA from "react-ga4";
 
 
-
 const Navbar = () => {
 
     const [isOpen, setOpen] = React.useState(false);
@@ -37,11 +36,13 @@ const Navbar = () => {
                         {/* VOTE NOW button */}
                         <Button
                             onClick={() => {
-                                ReactGA.event({
-                                    category: "Button",
-                                    action: "Vote button clicked",
-                                    label: "Vote Button",
-                                });
+                                if (ReactGA.isInitialized) {
+                                    ReactGA.event({
+                                        category: "Button",
+                                        action: "Vote button clicked",
+                                        label: "Vote Button",
+                                    });
+                                }
                                 window.open("https://westernusc.simplyvoting.com/", "_blank")
                             }}
                             variant="contained"
