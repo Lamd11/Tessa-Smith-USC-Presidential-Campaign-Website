@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Analytics } from "@vercel/analytics/react"
+import ReactGA from "react-ga4";
 import Landing from './components/Landing/Landing';
 import Platform from './components/Platform/Platform';
 import Contact from './components/Contact/Contact';
@@ -12,6 +13,8 @@ import NotFound from './components/NotFound';
 
 
 function App() {
+  ReactGA.initialize(process.env.REACT_APP_PUBLIC_GA_ID || "");
+
   const [showComponents, setShowComponents] = useState(false);
 
   useEffect(() => {
