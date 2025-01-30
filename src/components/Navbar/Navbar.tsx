@@ -20,15 +20,15 @@ const Navbar = () => {
         <>
             {/* Background Overlay */}
             {isOpen && (
-                <div className="fixed inset-0 z-20 h-full w-full bg-off-white opacity-100 transition-opacity duration-300 md:opacity-0"></div>
+                <div className="md:opacity-0 fixed inset-0 z-20 h-full w-full bg-off-white opacity-100 transition-opacity duration-300"></div>
             )}
-            <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-full flex-col sm:w-[90%]">
+            <nav className="h-22 sm:w-[90%] fixed top-0 z-50 mx-auto mt-2 w-full flex-col">
                 <div className="mx-auto flex flex-wrap items-center justify-between p-4">
-                    <div className="flex flex-row items-center gap-2 sm:gap-4">
+                    <div className="sm:gap-4 flex flex-row items-center gap-2">
                         <img
                             src="/images/logo.png" // Reference directly from public
                             alt="Tessa Smith"
-                            className="h-12 w-12 rounded-full object-cover shadow-md sm:h-20 sm:w-20"
+                            className="sm:h-20 sm:w-20 hidden h-8 rounded-full object-cover shadow-md xxxs:block xxs:h-12 xxs:w-12"
                         />
                         <AnimatedText />
                     </div>
@@ -45,7 +45,7 @@ const Navbar = () => {
                                 backgroundColor: isOpen ? "#FF4694" : "#FD75AE", // Darker pink when open, light pink otherwise
                                 color: "#F9F3F3", // Off-white"
                                 padding: {
-                                    xs: "8px 20px", // Small screens
+                                    xs: "6px 16px", // Small screens
                                     sm: "10px 28px", // Medium screens
                                     md: "12px 36px", // Larger screens
                                 },
@@ -64,7 +64,7 @@ const Navbar = () => {
                                 },
                             }}
                         >
-                            <h3 className="text-l sm:block">VOTE</h3>
+                            <h3 className="text-md sm:block xxs:text-lg">VOTE</h3>
                         </Button>
                         {/* pink-custom for menu button */}
                         <Button
@@ -75,7 +75,7 @@ const Navbar = () => {
                                 backgroundColor: isOpen ? "#FF4694" : "#FD75AE", // Darker pink when open, light pink otherwise
                                 color: "#F9F3F3", // Off-white"
                                 padding: {
-                                    xs: "8px 20px", // Small screens
+                                    xs: "6px 16px", // Small screens
                                     sm: "10px 28px", // Medium screens
                                     md: "12px 36px", // Larger screens
                                 },
@@ -94,7 +94,7 @@ const Navbar = () => {
                                 },
                             }}
                         >
-                            <h3 className="text-l mr-2 hidden sm:block">MENU</h3>
+                            <h3 className="text-md sm:block mr-2 hidden xxs:text-lg">MENU</h3>
                             <motion.div
                                 className="space-x-1 align-middle"
                                 animate={isOpen ? "open" : "closed"}
