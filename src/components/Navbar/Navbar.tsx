@@ -4,7 +4,6 @@ import AnimatedText from './AnimatedText';
 import Menu from './Menu';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
-import { track } from '@vercel/analytics';
 
 
 const Navbar = () => {
@@ -20,15 +19,15 @@ const Navbar = () => {
         <>
             {/* Background Overlay */}
             {isOpen && (
-                <div className="md:opacity-0 fixed inset-0 z-20 h-full w-full bg-off-white opacity-100 transition-opacity duration-300"></div>
+                <div className="fixed inset-0 z-20 h-full w-full bg-off-white opacity-100 transition-opacity duration-300 md:opacity-0"></div>
             )}
-            <nav className="h-22 sm:w-[90%] fixed top-0 z-50 mx-auto mt-2 w-full flex-col">
+            <nav className="h-22 fixed top-0 z-50 mx-auto mt-2 w-full flex-col sm:w-[90%]">
                 <div className="mx-auto flex flex-wrap items-center justify-between p-4">
-                    <div className="sm:gap-4 flex flex-row items-center gap-2">
+                    <div className="flex flex-row items-center gap-2 sm:gap-4">
                         <img
                             src="/images/logo.png" // Reference directly from public
                             alt="Tessa Smith"
-                            className="sm:h-20 sm:w-20 hidden h-8 rounded-full object-cover shadow-md xxxs:block xxs:h-12 xxs:w-12"
+                            className="h-[2rem] w-[2rem] rounded-full object-cover shadow-md sm:h-20 sm:w-20"
                         />
                         <AnimatedText />
                     </div>
@@ -36,7 +35,7 @@ const Navbar = () => {
                         {/* VOTE NOW button */}
                         <Button
                             onClick={() => {
-                                track('vote_button_clicked'); // Track the event
+
                                 window.open("https://westernusc.simplyvoting.com/", "_blank")
                             }}
                             variant="contained"
@@ -64,7 +63,7 @@ const Navbar = () => {
                                 },
                             }}
                         >
-                            <h3 className="text-md sm:block xxs:text-lg">VOTE</h3>
+                            <h3 className="text-md sm:block sm:text-lg">VOTE</h3>
                         </Button>
                         {/* pink-custom for menu button */}
                         <Button
@@ -94,7 +93,7 @@ const Navbar = () => {
                                 },
                             }}
                         >
-                            <h3 className="text-md sm:block mr-2 hidden xxs:text-lg">MENU</h3>
+                            <h3 className="text-md mr-2 hidden sm:block sm:text-lg">MENU</h3>
                             <motion.div
                                 className="space-x-1 align-middle"
                                 animate={isOpen ? "open" : "closed"}

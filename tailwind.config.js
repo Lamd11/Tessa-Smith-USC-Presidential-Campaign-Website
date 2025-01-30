@@ -23,10 +23,6 @@ module.exports = {
       'green-custom': '#10B981',        // Green for Linktree
       'light-green-custom': '#6EE7B7',  // Light green for hover effects
     },
-    screens: {
-      'xxs': '356px', // min-width
-      'xxxs': '324px', // super small
-    },
     extend: {
       fontFamily: {
         header: ['"Bebas Neue"', 'sans-serif'], // Font for h1 headers
