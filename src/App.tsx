@@ -13,8 +13,6 @@ import NotFound from './components/NotFound';
 
 
 function App() {
-  ReactGA.initialize(process.env.REACT_APP_PUBLIC_GA_ID || "");
-
   const [showComponents, setShowComponents] = useState(false);
 
   useEffect(() => {
@@ -22,6 +20,15 @@ function App() {
     const timeout = setTimeout(() => setShowComponents(true), 4500);
     return () => clearTimeout(timeout); // Cleanup timeout on component unmount
   }, []);
+
+  useEffect(() => {
+    const GA_ID = process.env.REACT_APP_PUBLIC_GA_ID || "";
+  
+    if (GA_ID) {
+      ReactGA.initialize(GA_ID);
+    }
+  }, []);
+  
 
   return (
     <Router>
