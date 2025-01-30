@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 interface MenuProps {
     isOpen: boolean
     sections: string[];

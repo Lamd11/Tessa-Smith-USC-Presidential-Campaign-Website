@@ -4,6 +4,8 @@ import AnimatedText from './AnimatedText';
 import Menu from './Menu';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
+import { track } from '@vercel/analytics';
+
 
 const Navbar = () => {
 
@@ -20,7 +22,7 @@ const Navbar = () => {
             {isOpen && (
                 <div className="fixed inset-0 z-20 h-full w-full bg-off-white opacity-100 transition-opacity duration-300 md:opacity-0"></div>
             )}
-            <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-[90%] flex-col">
+            <nav className="fixed top-0 z-50 mx-auto mt-2 h-20 w-full flex-col sm:w-[90%]">
                 <div className="mx-auto flex flex-wrap items-center justify-between p-4">
                     <div className="flex flex-row items-center gap-2 sm:gap-4">
                         <img
@@ -30,7 +32,40 @@ const Navbar = () => {
                         />
                         <AnimatedText />
                     </div>
-                    <div className="space-x-4">
+                    <div className="space-x-2">
+                        {/* VOTE NOW button */}
+                        <Button
+                            onClick={() => {
+                                track('vote_button_clicked'); // Track the event
+                                window.open("https://westernusc.simplyvoting.com/", "_blank")
+                            }}
+                            variant="contained"
+                            size="large"
+                            sx={{
+                                backgroundColor: isOpen ? "#FF4694" : "#FD75AE", // Darker pink when open, light pink otherwise
+                                color: "#F9F3F3", // Off-white"
+                                padding: {
+                                    xs: "8px 20px", // Small screens
+                                    sm: "10px 28px", // Medium screens
+                                    md: "12px 36px", // Larger screens
+                                },
+                                fontWeight: "bold",
+                                fontSize: {
+                                    xs: "14px", // Small screens
+                                    sm: "16px", // Medium screens
+                                    md: "18px", // Larger screens
+                                },
+                                borderRadius: "30px",
+                                "&:hover": {
+                                    backgroundColor: isOpen ? "#FF3968" : "#FF3968", // Slightly lighter pink when hovered
+                                },
+                                "&:active": {
+                                    backgroundColor: isOpen ? "#FF4694" : "#FF4694", // Slightly darker pink when clicked
+                                },
+                            }}
+                        >
+                            <h3 className="text-l sm:block">VOTE</h3>
+                        </Button>
                         {/* pink-custom for menu button */}
                         <Button
                             onClick={() => setOpen(!isOpen)}
