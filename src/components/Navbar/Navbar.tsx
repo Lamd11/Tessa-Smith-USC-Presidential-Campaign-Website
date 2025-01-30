@@ -4,6 +4,8 @@ import AnimatedText from './AnimatedText';
 import Menu from './Menu';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
+import ReactGA from "react-ga4";
+
 
 
 const Navbar = () => {
@@ -35,7 +37,11 @@ const Navbar = () => {
                         {/* VOTE NOW button */}
                         <Button
                             onClick={() => {
-
+                                ReactGA.event({
+                                    category: "Button",
+                                    action: "Vote button clicked",
+                                    label: "Vote Button",
+                                });
                                 window.open("https://westernusc.simplyvoting.com/", "_blank")
                             }}
                             variant="contained"
