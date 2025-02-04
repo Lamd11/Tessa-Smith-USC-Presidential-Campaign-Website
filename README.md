@@ -40,7 +40,7 @@ campaign/
 1. Clone the Repository
 
    ```bash
-   git clone https://github.com/Lamd11/campaign.git
+   git clone https://github.com/Lamd11/Tessa-Smith-USC-Presidential-Campaign-Website.git
    cd campaign
    ```
 
