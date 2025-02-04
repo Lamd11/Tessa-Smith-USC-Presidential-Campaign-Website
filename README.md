@@ -5,14 +5,20 @@ An informative, clean, dynamically responsive website for Tessa Smith, running f
 This website is designed to support the campaign of Tessa Smith's university student council presidential run. This website provides information for her platform, her qualifications, achievements, and plans for the university's community.
 
 ## Tech stack
-* Frontend: React + * TypeScript
-* Styling: TailwindCSS
-* Animations: React Motion
+* **Frontend**: React + * TypeScript
+* **Styling**: TailwindCSS
+* **Animations**: React Motion
+
+## Deployment
+* **Cloud Platform**: Vercel
+* **Web Host**: IONOs domain.
+
+Visit the live website here: https://tessasmith4usc.com
 
 ## Features
 * **Responsive Design**: Optimized for both desktop and mobile users.
 * **Engaging Animations**: Visually appealing animations when interacting with the site.  
-- **About the Candidate**: A detailed section highlighting Tessa's qualifications and vision.  
+* **About the Candidate**: A detailed section highlighting Tessa's qualifications and vision.  
 * **Contact Section**: Easy-to-use contact form for inquiries.  
 * **Platform Goals**: Engaging display of Tessa's vision and goals.
 
@@ -54,12 +60,6 @@ campaign/
     cd ../campaign
     npm start
     ```
-
-## Deployment
-* Cloud Platform: Vercel
-* Web Host: IONOs domain.
-
-Visit the live website here: https://tessasmith4usc.com
 
 
 ## Contributing
