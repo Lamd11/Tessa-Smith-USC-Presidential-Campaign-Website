@@ -1,2 +1,5 @@
 *.ts linguist-language=TypeScript
 *.tsx linguist-language=TypeScript
+*.js linguist-generated=true
+*.jsx linguist-generated=true
+*.map linguist-generated=true
